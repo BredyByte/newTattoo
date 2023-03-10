@@ -1,0 +1,14 @@
+@import './src/scss/fonts';
+
+.root {
+  font-size: 96px;
+  font-weight: 400;
+  color: white;
+  line-height: 1;
+  margin-bottom: 80px;
+}
+@media(max-width: 430px) {
+  .root {
+    margin-bottom: 40px;
+  }
+}

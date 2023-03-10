@@ -1,0 +1,51 @@
+.placeDiv {
+  z-index: 1;
+  position: absolute;
+}
+.placecard__container {
+  box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+  max-width: 330px;
+  width: 100%;
+  background: white none repeat scroll 0% 0%/auto padding-box border-box;
+  border-radius: 2px 2px 2px 2px;
+  font: normal normal normal normal 11px/normal Roboto, Arial, sans-serif;
+  margin: 10px;
+  padding: 15px;
+  overflow: hidden;
+}
+.placecard__left {
+  float: left;
+  width: 75%;
+}
+.placecard__business_name {
+  color: #5b5b5b;
+  cursor: default;
+  height: 19px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+  perspective-origin: 100px 9.5px;
+  transform-origin: 100px 9.5px;
+  font: normal normal 500 normal 14px/normal Roboto, Arial;
+  overflow: hidden;
+  margin: 0;
+}
+.placecard__info {
+  color: #5b5b5b;
+  cursor: default;
+  height: 32px;
+  width: 200px;
+  column-rule-color: #5b5b5b;
+  perspective-origin: 100px 16px;
+  transform-origin: 100px 16px;
+  border: 0px none #5b5b5b;
+  font: normal normal normal normal 12px/normal Roboto, Arial;
+  margin: 6px 0px 0px;
+  outline: #5b5b5b none 0px;
+}
+.placecard__view_large {
+  display: block;
+  margin-top: 10px;
+  color: #3a84df;
+  text-decoration: none;
+}

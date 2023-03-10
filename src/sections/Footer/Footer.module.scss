@@ -1,0 +1,66 @@
+.root {
+  .contentContainer {
+    text-align: center;
+    position: relative;
+  }
+
+  .contentContainer::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: #fff;
+  }
+
+  .contentContainer::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+  }
+
+  .imgContainer {
+    max-width: 540px;
+    margin: 0 auto;
+
+    .logo {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  .connectionList {
+    li + li {
+      margin-top: 15px;
+    }
+
+    li {
+      a {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media(max-width: 1240px) {
+  .root {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .root {
+    .imgContainer {
+      .logo {
+        max-width: 315px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

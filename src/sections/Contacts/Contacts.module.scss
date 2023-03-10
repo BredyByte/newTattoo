@@ -1,0 +1,41 @@
+.root {
+  padding-bottom: 150px;
+  width: 100%;
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px 50px;
+      margin-bottom: 90px;
+
+      .listItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .mapContainer {
+    position: relative;
+    height: 400px;
+  }
+}
+@media(max-width: 430px) {
+  .root {
+    padding-bottom: 100px;
+    .contentContainer{
+      .list {
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

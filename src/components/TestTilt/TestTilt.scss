@@ -1,0 +1,116 @@
+.parallaxEffect {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  transform-style: preserve-3d;
+  transform: translateZ(100px);
+  background-position: center center;
+
+  .innerElement {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+
+    .contentContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform-style: preserve-3d;
+      height: 290px;
+      width: 100%;
+      transform: scale(4);
+
+      .logo {
+        position: relative;
+        left: -25px;
+        transform: translateZ(100px);
+        width: 100%;
+        height: 100%;
+      }
+
+      .title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 90%;
+        font-size: 128px;
+        text-transform: uppercase;
+        transform: translateZ(50px);
+        color: gray;
+        line-height: 1;
+        font-size: calc((65vw - 4.5rem) / 7);
+      }
+
+      .subtitle {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        transform: translateZ(50px);
+        color: gray;
+        line-height: 1;
+        transform-style: preserve-3d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .subtitleText {
+          margin-bottom: 20px;
+          font-size: calc((45vw - 4.5rem) / 7);
+        }
+
+        .btn {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 1040px) {
+  .parallaxEffect {
+    .innerElement {
+      .contentContainer {
+        height: 230px;
+        .title {
+          font-size: calc(100vw / 10);
+        }
+        .subtitle {
+          .subtitleText {
+            font-size: calc(100vw / 10);
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 620px) {
+  .parallaxEffect {
+    .innerElement {
+      .contentContainer {
+        height: 190px;
+        .title {
+          font-size: calc(100vw / 5);
+        }
+        .subtitle {
+          .subtitleText {
+            font-size: calc(100vw / 6);
+          }
+        }
+      }
+    }
+  }
+}
