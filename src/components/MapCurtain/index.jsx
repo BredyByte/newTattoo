@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MapCurtain.module.scss';
-import Logo from '../../assets/icons/Logo.svg';
+import { ReactComponent as Logo } from '../../assets/icons/Logo.svg';
 
 export const MapCurtain = () => {
   const curtain = React.useRef(null);
@@ -10,7 +10,7 @@ export const MapCurtain = () => {
   };
   return (
     <div className={styles.root} ref={curtain}>
-      <img src={Logo} alt="" onClick={onClickHandler} />
+      <Logo onClick={onClickHandler} />
     </div>
   );
 };

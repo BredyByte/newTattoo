@@ -1,4 +1,10 @@
 .root {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   .contentContainer {
     text-align: center;
     position: relative;
@@ -31,6 +37,7 @@
     .logo {
       width: 100%;
       margin-bottom: 50px;
+      filter: drop-shadow(2px 2px 4px rgb(255, 255,255));
     }
   }
 
@@ -51,6 +58,7 @@
 @media(max-width: 1240px) {
   .root {
     padding: 0 20px;
+    min-height: 70vh;
   }
 }
 

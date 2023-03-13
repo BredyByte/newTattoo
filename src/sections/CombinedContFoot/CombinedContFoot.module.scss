@@ -1,16 +1,21 @@
 .root {
+  position: relative;
+  padding-top: 180px;
+  z-index: 2;
+}
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 150px 0;
+  z-index: 1;
 }
 @media(max-width: 1240px) {
   .root {
-    padding: 100px 0;
-  }
-}
-@media(max-width: 430px) {
-  .root {
-    padding: 50px 0;
+    padding-top: 100px;
   }
 }

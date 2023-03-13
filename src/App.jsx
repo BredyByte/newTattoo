@@ -7,13 +7,14 @@ export const App = () => {
     <div
       className="App"
       style={{
-        background: 'black',
+        background: '#1E1E1E',
         minHeight: '100vh',
         overflow: 'hidden',
         position: 'relative',
       }}
     >
-      <TestTilt />
+      <Services />
+      <CombinedContFoot />
     </div>
   );
 };

@@ -6,8 +6,6 @@ import { Title, ToSectionBtn } from '../../components';
 export const Services = () => {
   return (
     <div className={styles.root}>
-      <Logo className={styles.bgImg} />
-      <div className={styles.bg}></div>
       <div className={`${styles.contentContainer} container`}>
         <div className={styles.contentInner}>
           <div className={styles.infoContainer}>
