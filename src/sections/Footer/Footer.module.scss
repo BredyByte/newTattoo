@@ -10,25 +10,25 @@
     position: relative;
   }
 
-  .contentContainer::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    right: 0;
-    top: 0;
-    background: #fff;
-  }
-
-  .contentContainer::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: #fff;
-  }
+  //.contentContainer::after {
+  //  content: '';
+  //  position: absolute;
+  //  width: 2px;
+  //  height: 100%;
+  //  right: 0;
+  //  top: 0;
+  //  background: #fff;
+  //}
+  //
+  //.contentContainer::before {
+  //  content: '';
+  //  position: absolute;
+  //  width: 2px;
+  //  height: 100%;
+  //  left: 0;
+  //  top: 0;
+  //  background: #fff;
+  //}
 
   .imgContainer {
     max-width: 540px;
