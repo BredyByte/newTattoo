@@ -8,9 +8,10 @@ export const CombinedContFoot = () => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start ', 'end start'],
+    // offset: ['start', 'end start'],
+    offset: ['start end', 'end end'],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+  const y = useTransform(scrollYProgress, [0, 1], ['-40%', '30%']);
   return (
     <div className={styles.root} ref={ref}>
       <motion.div
