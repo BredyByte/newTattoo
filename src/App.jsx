@@ -1,5 +1,11 @@
 import React from 'react';
-import { Footer, Contacts, CombinedContFoot, Services } from './sections';
+import {
+  Footer,
+  Contacts,
+  CombinedContFoot,
+  Services,
+  PreliminaryPage,
+} from './sections';
 import { Slider, ToSectionBtn, TestTilt, PreviewPageBtn } from './components';
 
 export const App = () => {
@@ -7,12 +13,13 @@ export const App = () => {
     <div
       className="App"
       style={{
-        background: '#1E1E1E',
+        background: 'black',
         minHeight: '100vh',
         overflow: 'hidden',
         position: 'relative',
       }}
     >
+      <PreliminaryPage />
       <Services />
       <CombinedContFoot />
     </div>

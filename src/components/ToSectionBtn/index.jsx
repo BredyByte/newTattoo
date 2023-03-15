@@ -15,5 +15,5 @@ export const ToSectionBtn = ({ text, isBlack }) => {
 
 ToSectionBtn.propTypes = {
   text: PropTypes.string.isRequired,
-  isBlack: PropTypes.bool.isRequired,
+  isBlack: PropTypes.bool,
 };

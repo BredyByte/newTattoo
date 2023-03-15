@@ -6,6 +6,7 @@
   cursor: pointer;
 
   .text {
+    color: #000;
     position: relative;
     text-transform: uppercase;
     font-weight: 500;
@@ -33,7 +34,7 @@
     position: relative;
     width: 50px;
     height: 50px;
-    border: 1px solid #fff;
+    border: 0.5px solid rgba(0,0,0, 0.3);
     border-radius: 50%;
     transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     margin-bottom: 5px;
@@ -42,23 +43,25 @@
       position: absolute;
       width: 40px;
       height: 0.5px;
-      background: #fff;
+      background: #000;
       left: -50%;
       top: 50%;
       z-index: 12;
       transform: translateY(-50%);
       transition: left 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
 
-      &::after {
-        content: '';
+      &::before {
+        color: black;
+        right: -1px;
+        top: -2px;
+        content: "";
         position: absolute;
-        right: 1px;
-        top: -3px;
-        width: 6px;
-        height: 6px;
-        border-bottom: 1px solid #fff;
-        border-right: 1px solid #fff;
-        transform: rotate(-45deg);
+        display: inline-block;
+        height: 0px;
+        width: 0px;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 4px solid;
       }
     }
   }
@@ -78,23 +81,5 @@
         left: -10%;
       }
     }
-  }
-}
-
-.root.black {
-  .circle {
-    border-color: #000;
-
-    .arrow {
-      background: #000;
-
-      &::after {
-        border-bottom-color: #000;
-        border-right-color: #000;
-      }
-    }
-  }
-  .text {
-    color: #000;
   }
 }

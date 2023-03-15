@@ -1,19 +1,21 @@
 @import './libs/normalize';
-@import './variables';
 @import './fonts';
 
 *::selection {
-  color: $black;
-  background: $white;
+  color: black;
+  background: white;
 }
 input:-webkit-autofill
 {
-  -webkit-box-shadow: 0 0 0 30px rgba($black, 0.5) inset !important;
+  -webkit-box-shadow: 0 0 0 30px rgba(black, 0.5) inset !important;
 }
 body {
   color: white;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 .container {
   margin: 0 auto;

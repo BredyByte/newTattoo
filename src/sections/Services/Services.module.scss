@@ -1,28 +1,30 @@
 .root {
-  background: #000;
   position: relative;
   overflow: hidden;
+  background-color: gray;
 
-  .bg {
-    position: absolute;
-    height: 150%;
-    width: 150%;
-    background: rgba(255, 255, 255, 0.9);
-    z-index: 1;
-  }
-  .bgImg {
-    position: absolute;
-    left: 50%;
-    top: -35%;
-    transform: translateX(-70%) scale(3);
+  .bgc {
+    color: white;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    svg {
+      position: absolute;
+      z-index: 0;
+      top: -70%;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      filter: drop-shadow(2px 2px 5px rgb(0, 0, 0)) contrast(0.1);
+    }
   }
   .contentContainer {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     position: relative;
     z-index: 2;
 
@@ -31,9 +33,8 @@
       justify-content: space-between;
       align-items: center;
       gap: 0 30px;
-      border-left: 2px solid #D99938;
-      border-right: 2px solid #D99938;
       padding: 0 100px;
+      z-index: 2;
 
       .infoContainer {
         .text {

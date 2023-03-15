@@ -4,5 +4,5 @@ export { MapCurtain } from './MapCurtain';
 export { Map } from './Map';
 export { Slider } from './Slider';
 export { ToSectionBtn } from './ToSectionBtn';
-export { TestTilt } from './TestTilt';
+export { FullPageTilt } from './FullPageTilt';
 export { PreviewPageBtn } from './PreviewPageBtn';

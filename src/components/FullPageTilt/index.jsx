@@ -7,7 +7,7 @@ import './TestTilt.scss';
 import { PreviewPageBtn } from '../PreviewPageBtn';
 import { motion } from 'framer-motion';
 
-export const TestTilt = () => {
+export const FullPageTilt = () => {
   if (window.innerWidth <= 620) {
     return (
       <div
@@ -31,7 +31,7 @@ export const TestTilt = () => {
             <Logo className="logo" />
             <div className="title secondaryFont">Creamos Milagros</div>
             <div className="subtitle secondaryFont">
-              <span className="subtitleText">Greatest tattooing ever</span>
+              <span className="subtitleText">Los mejores tatuajes</span>
               <PreviewPageBtn />
             </div>
           </motion.div>
@@ -67,7 +67,7 @@ export const TestTilt = () => {
           <Logo className="logo" />
           <div className="title secondaryFont">Creamos Milagros</div>
           <div className="subtitle secondaryFont">
-            <span className="subtitleText">Greatest tattooing ever</span>
+            <span className="subtitleText">Los mejores tatuajes</span>
             <PreviewPageBtn />
           </div>
         </motion.div>
