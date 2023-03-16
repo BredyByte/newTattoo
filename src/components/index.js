@@ -6,3 +6,4 @@ export { Slider } from './Slider';
 export { ToSectionBtn } from './ToSectionBtn';
 export { FullPageTilt } from './FullPageTilt';
 export { PreviewPageBtn } from './PreviewPageBtn';
+export { TestFirstPresentationPage } from './TestFirstPresentationPage';
