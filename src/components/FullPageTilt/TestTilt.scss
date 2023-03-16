@@ -12,6 +12,7 @@
   transform-style: preserve-3d;
   transform: translateZ(100px);
   background-position: center center;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 22px 70px 4px;
 
   .innerElement {
     position: relative;
@@ -39,6 +40,7 @@
         transform: translateZ(100px);
         width: 100%;
         height: 100%;
+        filter: drop-shadow(2px 2px 3px rgb(0, 0,0));
       }
 
       .title {
@@ -46,12 +48,12 @@
         left: 0;
         right: 0;
         bottom: 90%;
-        font-size: 128px;
         text-transform: uppercase;
         transform: translateZ(50px);
         color: gray;
         line-height: 1;
         font-size: calc((65vw - 4.5rem) / 7);
+        text-shadow: 3px 3px 4px black;
       }
 
       .subtitle {
@@ -67,6 +69,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-shadow: 3px 3px 4px black;
 
         .subtitleText {
           margin-bottom: 20px;

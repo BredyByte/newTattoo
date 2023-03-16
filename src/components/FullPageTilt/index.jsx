@@ -1,7 +1,6 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
-import img from '../../assets/img/firstPageBg.png';
-import img1 from '../../assets/img/firstPageBg1.png';
+import img from '../../assets/img/firstPageBg1.png';
 import { ReactComponent as Logo } from '../../assets/icons/Logo.svg';
 import './TestTilt.scss';
 import { PreviewPageBtn } from '../PreviewPageBtn';
@@ -13,7 +12,7 @@ export const FullPageTilt = () => {
       <div
         className="parallaxEffect"
         style={{
-          backgroundImage: `url(${img1})`,
+          backgroundImage: `url(${img})`,
         }}
       >
         <div className="innerElement">
@@ -44,9 +43,9 @@ export const FullPageTilt = () => {
       className="parallaxEffect"
       perspective={1000}
       transitionSpeed={1000}
-      tiltMaxAngleX={15}
-      tiltMaxAngleY={15}
-      scale={0.9}
+      tiltMaxAngleX={6}
+      tiltMaxAngleY={6}
+      scale={0.96}
       gyroscope={true}
       style={{
         backgroundImage: `url(${img})`,
