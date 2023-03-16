@@ -20,22 +20,20 @@ body {
 //::-webkit-scrollbar {
 //  display: none;
 //}
-//
-//body::-webkit-scrollbar {
-//  background-color: black;
-//  width: 8px;
-//}
-//
-///* Устанавливаем ширину и цвет полосы скролл бара */
-//body::-webkit-scrollbar-thumb {
-//  background-color: rgba(255,255,255, 0.4);
-//}
-//
-///* Устанавливаем цвет и прозрачность трека скролл бара */
-//body::-webkit-scrollbar-track {
-//  background-color: transparent;
-//  border-radius: 10px;
-//}
+
+body::-webkit-scrollbar {
+  background-color: black;
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255, 0.4);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
 .container {
   margin: 0 auto;
   width: 100%;

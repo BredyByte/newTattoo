@@ -18,7 +18,9 @@ const useParallax = (value, distance) => {
 
 const Image = ({ id }) => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  });
   const y = useParallax(scrollYProgress, 300);
 
   return (
@@ -27,7 +29,7 @@ const Image = ({ id }) => {
         {/*<img src={`/${id}.jpg`} alt="A London skyscraper" />*/}
         <div className="img"></div>
       </div>
-      <motion.h2 style={{ y }}>{`#00${id}`}</motion.h2>
+      <motion.h2 className="numbers" style={{ y }}>{`#00${id}`}</motion.h2>
     </section>
   );
 };
