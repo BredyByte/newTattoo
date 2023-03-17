@@ -2,15 +2,9 @@
 import React from 'react';
 import './test.css';
 import { useRef } from 'react';
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue,
-} from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { ToSectionBtn } from '../ToSectionBtn';
+import { Title } from '../../components';
 
 const useParallax = (value, distance) => {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -29,12 +23,14 @@ const Image = ({ id }) => {
         {/*<img src={`/${id}.jpg`} alt="A London skyscraper" />*/}
         <div className="img"></div>
       </div>
-      <motion.h2 className="numbers" style={{ y }}>{`#00${id}`}</motion.h2>
+      <motion.h2 className="numbers" style={{ y }}>
+        <Title text={id} />
+      </motion.h2>
     </section>
   );
 };
 
-export const TestFirstPresentationPage = () => {
+export const FirstPresentationPage = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -44,9 +40,11 @@ export const TestFirstPresentationPage = () => {
 
   return (
     <>
-      {[1, 2, 3, 4, 5].map((image, index) => (
-        <Image key={index} id={image} />
-      ))}
+      {['About', 'Services', 'Contacts', 'Works', 'Shop'].map(
+        (image, index) => (
+          <Image key={index} id={image} />
+        )
+      )}
       <motion.div className="progress" style={{ scaleX }} />
     </>
   );

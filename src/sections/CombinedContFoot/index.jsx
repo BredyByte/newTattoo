@@ -11,7 +11,7 @@ export const CombinedContFoot = () => {
     // offset: ['start', 'end start'],
     offset: ['start end', 'end end'],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ['-50%', '30%']);
+  const y = useTransform(scrollYProgress, [0, 1], ['-30%', '20%']);
   return (
     <div className={styles.root} ref={ref}>
       <motion.div

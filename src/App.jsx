@@ -1,18 +1,7 @@
 import React from 'react';
-import {
-  Footer,
-  Contacts,
-  CombinedContFoot,
-  Services,
-  PreliminaryPage,
-} from './sections';
-import {
-  Slider,
-  ToSectionBtn,
-  TestTilt,
-  PreviewPageBtn,
-  TestFirstPresentationPage,
-} from './components';
+import { CombinedContFoot, FirstPresentationPage } from './sections';
+import {} from './components';
+import { PreliminaryPage, Home } from './pages';
 
 export const App = () => {
   return (
@@ -25,9 +14,8 @@ export const App = () => {
         position: 'relative',
       }}
     >
-      <PreliminaryPage />
-      <TestFirstPresentationPage />
-      <Services />
+      {/*<PreliminaryPage />*/}
+      <Home />
       <CombinedContFoot />
     </div>
   );

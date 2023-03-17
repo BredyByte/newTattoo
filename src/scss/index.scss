@@ -10,12 +10,13 @@ input:-webkit-autofill
   -webkit-box-shadow: 0 0 0 30px rgba(black, 0.5) inset !important;
 }
 html {
-  background-color: black;
+  background-color: green;
+  scroll-snap-type: y mandatory;
 }
 body {
   color: white;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Magra', sans-serif;
 }
 //::-webkit-scrollbar {
 //  display: none;
