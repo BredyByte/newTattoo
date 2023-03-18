@@ -51,5 +51,5 @@ export const FirstPresentationPage = () => {
 };
 
 Image.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };

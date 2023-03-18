@@ -1,14 +1,42 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
+import { motion } from 'framer-motion';
+import { useScroll } from '../../animations/useScroll';
+import { navAnimation } from '../../animations';
 
 export const MenuBar = () => {
-  const [background, setBackground] = React.useState('rgba(0, 0, 0, 0)');
+  const [isBackground, setIsBackground] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [element, controls] = useScroll();
+
+  const disableScroll = () => {
+    const scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.marginRight = scrollBarWidth + 'px';
+    document.body.style.overflowY = 'hidden';
+  };
+
+  const enableScroll = () => {
+    document.body.style.marginRight = '';
+    document.body.style.overflowY = 'auto';
+  };
+
+  const handleButtonClick = () => {
+    setIsBackground(false);
+    setTimeout(() => {
+      setIsOpen((prev) => !prev);
+    }, 400);
+    if (isOpen) {
+      enableScroll();
+    } else {
+      disableScroll();
+    }
+  };
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
-    const newBackground = scrollTop > 50 ? 'rgba(0, 0, 0, 0.5)' : background;
-    setBackground(newBackground);
+    scrollTop > 50 ? setIsBackground(true) : setIsBackground(false);
   };
 
   React.useEffect(() => {
@@ -18,19 +46,28 @@ export const MenuBar = () => {
     };
   }, []);
   return (
-    <nav className={styles.root} style={{ background: background }}>
+    <nav className={`${styles.root} ${isBackground ? styles.active : ''}`}>
       <LogoText className={styles.logo} />
-      <menu className={styles.menu}>
+      <motion.menu
+        ref={element}
+        variants={navAnimation}
+        transition={{ delay: 0.1 }}
+        animate={controls}
+        className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}
+      >
         <li className={styles.menuItem}>Home</li>
         <li className={styles.menuItem}>About</li>
         <li className={styles.menuItem}>Services</li>
         <li className={styles.menuItem}>Contacts</li>
         <li className={styles.menuItem}>Works</li>
-      </menu>
-      <button className={styles.navButton}>
-        <div className="line line__1"></div>
-        <div className="line line__2"></div>
-        <div className="line line__3"></div>
+      </motion.menu>
+      <button
+        className={`${styles.navButton} ${isOpen ? styles.close : ''}`}
+        onClick={handleButtonClick}
+      >
+        <div className={`${styles.line} ${styles.line__1}`}></div>
+        <div className={`${styles.line} ${styles.line__2}`}></div>
+        <div className={`${styles.line} ${styles.line__3}`}></div>
       </button>
     </nav>
   );

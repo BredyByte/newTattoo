@@ -1,3 +1,9 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .root {
   display: flex;
   justify-content: space-between;
@@ -9,7 +15,11 @@
   width: 100%;
   z-index: 3;
   padding: 10px 40px;
-  transition: background .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  &.active {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: saturate(0%) invert(1)  blur(2px);
+  }
   .logo {
     width: 400px;
     height: 85px;
@@ -19,16 +29,101 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0 30px;
+    gap: 0 25px;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 18px;
     li {
       text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
       transition: all 0.3s;
       &:hover {
         transform: translateY(3px);
         text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+  .navButton {
+    display: none;
+    background: none;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .root {
+    .logo {
+
+    }
+    .menu {
+      width: 0%;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px 0;
+      position: absolute;
+      overflow-x: hidden;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s ease-in-out;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: saturate(0%) invert(1) blur(2px);
+      li {
+        &:hover {
+        }
+      }
+      &.isOpen {
+        width: 100%;
+        opacity: 1!important;
+        visibility: visible!important;
+      }
+    }
+    .navButton {
+      display: block;
+      $width: 25px;
+      $transition-time: 350ms;
+      top: 20px;
+      right: 20px;
+      width: #{$width + 10px};
+      height: #{$width + 10px};
+      @include flex-center();
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 12;
+      &.close {
+        .line {
+          &__1 {
+            transform: rotate(45deg) translate(2px, -3px);
+          }
+          &__2 {
+            transform: rotate(-45deg);
+          }
+          &__3 {
+            transform: rotate(45deg) translate(-2px, 3px);
+          }
+        }
+      }
+      .line {
+        width: $width;
+        background: #fff;
+        height: 2px;
+        margin: 3px 0;
+        transition: all $transition-time cubic-bezier(0.9, 0, 0.33, 1);
+        &__1 {
+          width: $width;
+          transform-origin: left;
+        }
+        &__2 {
+          width: $width;
+          transform-origin: center;
+        }
+        &__3 {
+          width: $width;
+          transform-origin: right;
+        }
       }
     }
   }
