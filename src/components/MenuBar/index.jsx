@@ -18,7 +18,7 @@ export const MenuBar = () => {
   };
 
   const enableScroll = () => {
-    document.body.style.marginRight = 0;
+    document.body.style.marginRight = '';
     document.body.style.overflowY = 'auto';
   };
 
@@ -33,9 +33,7 @@ export const MenuBar = () => {
       document.removeEventListener('touchmove', handleTouchMove);
     } else {
       disableScroll();
-      document.addEventListener('touchmove', handleTouchMove, {
-        passive: false,
-      });
+      document.addEventListener('touchmove', handleTouchMove);
     }
   };
 
