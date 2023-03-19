@@ -1,6 +1,5 @@
-// Photos from https://citizenofnowhe.re/lines-of-the-city
 import React from 'react';
-import './test.css';
+import styles from './PresentationPage.module.scss';
 import { useRef } from 'react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
@@ -21,16 +20,16 @@ const Image = ({ id }) => {
     <section>
       <div ref={ref}>
         {/*<img src={`/${id}.jpg`} alt="A London skyscraper" />*/}
-        <div className="img"></div>
+        <div></div>
       </div>
-      <motion.h2 className="numbers" style={{ y }}>
+      <motion.h2 className={styles.numbers} style={{ y }}>
         <Title text={id} />
       </motion.h2>
     </section>
   );
 };
 
-export const FirstPresentationPage = () => {
+export const PresentationPage = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -45,7 +44,7 @@ export const FirstPresentationPage = () => {
           <Image key={index} id={image} />
         )
       )}
-      <motion.div className="progress" style={{ scaleX }} />
+      <motion.div className={styles.progress} style={{ scaleX }} />
     </>
   );
 };

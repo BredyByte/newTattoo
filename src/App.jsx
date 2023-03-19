@@ -1,5 +1,5 @@
 import React from 'react';
-import { CombinedContFoot, FirstPresentationPage } from './sections';
+import { CombinedContFoot } from './sections';
 import {} from './components';
 import { PreliminaryPage, Home } from './pages';
 

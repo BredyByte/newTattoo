@@ -14,16 +14,17 @@
   left: 0;
   width: 100%;
   z-index: 3;
-  padding: 10px 40px;
-  transition: all .5s ease-in-out;
+  padding: 35px 80px;
+  transition: background .5s ease-in-out;
   &.active {
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: saturate(0%) invert(1)  blur(2px);
+    backdrop-filter: blur(2px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   }
   .logo {
     width: 400px;
     height: 85px;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.8));
+    //filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.8));
   }
   .menu {
     display: flex;
@@ -51,10 +52,13 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .root {
-    .logo {
+    padding: 20px;
 
+    .logo {
+      width: 300px;
+      height: 100%;
     }
     .menu {
       width: 0%;
@@ -68,9 +72,9 @@
       height: 100vh;
       opacity: 0;
       visibility: hidden;
-      transition: 0.4s ease-in-out;
-      background: rgba(0, 0, 0, 0.5);
-      backdrop-filter: saturate(0%) invert(1) blur(2px);
+      transition: all .5s ease-in-out;
+      background: black;
+      //backdrop-filter: saturate(0%) invert(1) blur(2px);
       li {
         &:hover {
         }

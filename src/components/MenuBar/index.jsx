@@ -1,14 +1,11 @@
 import React from 'react';
-import styles from './styles.module.scss';
+import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
-import { motion } from 'framer-motion';
-import { useScroll } from '../../animations/useScroll';
-import { navAnimation } from '../../animations';
+import { ReactComponent as Logo } from '../../assets/icons/Logo.svg';
 
 export const MenuBar = () => {
   const [isBackground, setIsBackground] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
-  const [element, controls] = useScroll();
 
   const disableScroll = () => {
     const scrollBarWidth =
@@ -24,10 +21,7 @@ export const MenuBar = () => {
 
   const handleButtonClick = () => {
     const handleTouchMove = (e) => e.preventDefault();
-    setIsBackground(false);
-    setTimeout(() => {
-      setIsOpen((prev) => !prev);
-    }, 400);
+    setIsOpen((prev) => !prev);
     if (isOpen) {
       enableScroll();
       document.removeEventListener('touchmove', handleTouchMove);
@@ -51,19 +45,14 @@ export const MenuBar = () => {
   return (
     <nav className={`${styles.root} ${isBackground ? styles.active : ''}`}>
       <LogoText className={styles.logo} />
-      <motion.menu
-        ref={element}
-        variants={navAnimation}
-        transition={{ delay: 0.1 }}
-        animate={controls}
-        className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}
-      >
+      <menu className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}>
         <li className={styles.menuItem}>Home</li>
         <li className={styles.menuItem}>About</li>
         <li className={styles.menuItem}>Services</li>
         <li className={styles.menuItem}>Contacts</li>
         <li className={styles.menuItem}>Works</li>
-      </motion.menu>
+        <Logo />
+      </menu>
       <button
         className={`${styles.navButton} ${isOpen ? styles.close : ''}`}
         onClick={handleButtonClick}

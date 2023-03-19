@@ -35,3 +35,9 @@ section > div {
   background: rgba(255,255,255, 0.4);
   bottom: 100px;
 }
+
+@media (max-width: 576px) {
+  .numbers {
+    left: 50%;
+  }
+}
