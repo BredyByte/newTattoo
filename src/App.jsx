@@ -16,7 +16,7 @@ export const App = () => {
     >
       {/*<PreliminaryPage />*/}
       <Home />
-      <CombinedContFoot />
+      {/*<CombinedContFoot />*/}
     </div>
   );
 };
