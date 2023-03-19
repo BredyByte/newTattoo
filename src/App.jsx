@@ -14,9 +14,9 @@ export const App = () => {
         position: 'relative',
       }}
     >
-      {/*<PreliminaryPage />*/}
+      <PreliminaryPage />
       <Home />
-      {/*<CombinedContFoot />*/}
+      <CombinedContFoot />
     </div>
   );
 };
