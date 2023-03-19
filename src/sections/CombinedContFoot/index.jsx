@@ -1,6 +1,6 @@
 import React from 'react';
 import { Footer, Contacts } from '../';
-import grayBg from '../../assets/img/grayBg.jpg';
+import grayBg from '../../assets/img/grayBg.webp';
 import styles from './CombinedContFoot.module.scss';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
