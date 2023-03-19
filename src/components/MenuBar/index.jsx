@@ -18,19 +18,24 @@ export const MenuBar = () => {
   };
 
   const enableScroll = () => {
-    document.body.style.marginRight = '';
+    document.body.style.marginRight = 0;
     document.body.style.overflowY = 'auto';
   };
 
   const handleButtonClick = () => {
+    const handleTouchMove = (e) => e.preventDefault();
     setIsBackground(false);
     setTimeout(() => {
       setIsOpen((prev) => !prev);
     }, 400);
     if (isOpen) {
       enableScroll();
+      document.removeEventListener('touchmove', handleTouchMove);
     } else {
       disableScroll();
+      document.addEventListener('touchmove', handleTouchMove, {
+        passive: false,
+      });
     }
   };
 
