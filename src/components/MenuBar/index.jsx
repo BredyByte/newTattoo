@@ -3,6 +3,8 @@ import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
 import { ReactComponent as Logo } from '../../assets/icons/Logo.svg';
 
+const arr = ['Home', 'About', 'Service', 'Works', 'Shop'];
+
 export const MenuBar = () => {
   const [isBackground, setIsBackground] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
@@ -46,12 +48,11 @@ export const MenuBar = () => {
     <nav className={`${styles.root} ${isBackground ? styles.active : ''}`}>
       <LogoText className={styles.logo} />
       <menu className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}>
-        <li className={styles.menuItem}>Home</li>
-        <li className={styles.menuItem}>About</li>
-        <li className={styles.menuItem}>Services</li>
-        <li className={styles.menuItem}>Contacts</li>
-        <li className={styles.menuItem}>Works</li>
-        <Logo />
+        {arr.map((i) => (
+          <li className={styles.menuItem} key={i}>
+            {i}
+          </li>
+        ))}
       </menu>
       <button
         className={`${styles.navButton} ${isOpen ? styles.close : ''}`}

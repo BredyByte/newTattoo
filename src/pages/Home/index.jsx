@@ -1,5 +1,10 @@
 import React from 'react';
-import { PresentationPage } from '../../sections/';
+import {
+  PresentationPage,
+  Footer,
+  CombinedContFoot,
+  NewFooter,
+} from '../../sections/';
 import { MenuBar } from '../../components';
 
 export const Home = () => {
@@ -7,6 +12,7 @@ export const Home = () => {
     <div style={{ position: 'relative' }}>
       <MenuBar />
       <PresentationPage />
+      <NewFooter />
     </div>
   );
 };
