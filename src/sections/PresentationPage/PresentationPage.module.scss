@@ -23,7 +23,8 @@ section > div {
   height: 400px;
   position: relative;
   max-height: 90vh;
-  background: yellow;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: grayscale(1) blur(4px);
   overflow: hidden;
 }
 

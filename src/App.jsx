@@ -10,7 +10,7 @@ export const App = () => {
       style={{
         // background: 'black',
         // minHeight: '100vh',
-        overflow: 'hidden',
+        // overflow: 'hidden',
         position: 'relative',
       }}
     >
