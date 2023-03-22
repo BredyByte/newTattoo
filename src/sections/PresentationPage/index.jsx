@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { Title } from '../../components';
 import { presentationPageData } from '../../assets';
-import bg from '../../assets/img/Studio7.webp';
+import bg from '../../assets/img/firstPageBg1.png';
 
 const useParallax = (value, distance) => {
   return useTransform(value, [0, 1], [-distance, distance]);
