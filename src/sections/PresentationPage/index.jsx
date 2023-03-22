@@ -16,7 +16,7 @@ const Image = ({ img, title }) => {
   const { scrollYProgress } = useScroll({
     target: ref,
   });
-  const y = useParallax(scrollYProgress, 500);
+  const y = useParallax(scrollYProgress, 300);
   return (
     <section
       style={{

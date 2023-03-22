@@ -9,6 +9,7 @@ export const PreliminaryPage = () => {
         overflow: 'hidden',
         background: 'black',
         position: 'relative',
+        scrollSnapAlign: 'center',
       }}
     >
       <FullPageTilt />

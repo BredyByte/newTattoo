@@ -7,6 +7,8 @@ export const swiperImages = [
   require('./img/swiperImg6.jpg'),
 ];
 export const presentationPageData = [
-  { title: 'About', img: require('./img/Studio.jpg') },
-  { title: 'Services', img: require('./img/Studio2.jpg') },
+  { title: 'Who We Are', img: require('./img/Studio.jpg') },
+  { title: 'Our Services', img: require('./img/Studio2.jpg') },
+  { title: 'The Best Work', img: require('./img/Studio3.jpg') },
+  { title: 'We Offer', img: require('./img/Studio5.jpeg') },
 ];
