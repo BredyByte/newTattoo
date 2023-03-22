@@ -5,31 +5,35 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { Title } from '../../components';
 import { presentationPageData } from '../../assets';
-import grayBg from '../../assets/img/grayBg.webp';
+import bg from '../../assets/img/Studio7.webp';
 
 const useParallax = (value, distance) => {
   return useTransform(value, [0, 1], [-distance, distance]);
 };
 
 const Image = ({ img, title }) => {
-  const ref = useRef(null);
+  const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
+    // offset: ['start', 'end start'],
+    offset: ['start end', 'end end'],
   });
-  const y = useParallax(scrollYProgress, 300);
+  const y = useTransform(scrollYProgress, [0, 1], ['-50%', '0%']);
   return (
-    <section
-      style={{
-        backgroundImage: `url(${img})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      <div ref={ref}>{/*<img src={`${id}`} alt="A London skyscraper" />*/}</div>
-      <motion.h2 className={styles.numbers} style={{ y }}>
+    <section ref={ref}>
+      <motion.div
+        style={{
+          y,
+          backgroundImage: `url(${img})`,
+        }}
+        className={styles.background}
+      />
+      <div className={styles.content}>
+        {/*<img src={`${id}`} alt="A London skyscraper" />*/}
+      </div>
+      <h2 className={styles.numbers}>
         <Title text={title} />
-      </motion.h2>
+      </h2>
     </section>
   );
 };
@@ -44,6 +48,15 @@ export const PresentationPage = () => {
 
   return (
     <>
+      <div
+        className={styles.first}
+        style={{
+          scrollSnapAlign: 'center',
+          minHeight: '100vh',
+          width: '100%',
+          backgroundImage: `url(${bg})`,
+        }}
+      ></div>
       {presentationPageData.map((obj, index) => (
         <Image key={index} img={obj.img} title={obj.title} />
       ))}
