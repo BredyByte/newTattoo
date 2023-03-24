@@ -7,9 +7,6 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  scroll-snap-align: center;
-  perspective: 500px;
-  transition: all .2s ease;
   &::before {
     content: '';
     position: absolute;
