@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: center;
 }
 .Hello img {
   height: 100vh!important;
