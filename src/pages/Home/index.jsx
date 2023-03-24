@@ -12,16 +12,11 @@ import styles from './Home.module.scss';
 
 export const Home = () => {
   return (
-    <div
-      className={styles.root}
-      style={{
-        position: 'relative',
-      }}
-    >
-      <MenuBar />
+    <>
+      {/*<MenuBar />*/}
       <PresentationPage />
-      <NewFooter />
+      {/*<NewFooter />*/}
       {/*<CombinedContFoot />*/}
-    </div>
+    </>
   );
 };

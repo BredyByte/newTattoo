@@ -1,72 +1,60 @@
 import React from 'react';
+import './styles.scss';
 import styles from './PresentationPage.module.scss';
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
+import { Parallax, Background } from 'react-parallax';
 import { Title } from '../../components';
-import { presentationPageData } from '../../assets';
-import bg from '../../assets/img/firstPageBg1.png';
-
-const useParallax = (value, distance) => {
-  return useTransform(value, [0, 1], [-distance, distance]);
-};
-
-const Image = ({ img, title }) => {
-  const ref = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    // offset: ['start', 'end start'],
-    offset: ['start end', 'end end'],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ['-50%', '0%']);
-  return (
-    <section ref={ref}>
-      <motion.div
-        style={{
-          y,
-          backgroundImage: `url(${img})`,
-        }}
-        className={styles.background}
-      />
-      <div className={styles.content}>
-        {/*<img src={`${id}`} alt="A London skyscraper" />*/}
-      </div>
-      <h2 className={styles.numbers}>
-        <Title text={title} />
-      </h2>
-    </section>
-  );
-};
+import bg1 from '../../assets/img/Studio.webp';
+import bg3 from '../../assets/img/Studio6.webp';
+import bg2 from '../../assets/img/Studio2.webp';
+import bg4 from '../../assets/img/Studio7.webp';
+import bg5 from '../../assets/img/Studio3.webp';
 
 export const PresentationPage = () => {
-  // const { scrollYProgress } = useScroll();
-  // const scaleX = useSpring(scrollYProgress, {
-  //   stiffness: 100,
-  //   damping: 30,
-  //   restDelta: 0.001,
-  // });
-
   return (
-    <>
-      <div
-        className={styles.first}
-        style={{
-          scrollSnapAlign: 'center',
-          minHeight: '100vh',
-          width: '100%',
-          backgroundImage: `url(${bg})`,
-        }}
-      ></div>
-      {presentationPageData.map((obj, index) => (
-        <Image key={index} img={obj.img} title={obj.title} />
-      ))}
-
-      {/*<motion.div className={styles.progress} style={{ scaleX }} />*/}
-    </>
+    <div className="Test">
+      <Parallax strength={300} className="Hello">
+        <Background>
+          <div
+            className={styles.background}
+            style={{
+              backgroundImage: `url(${bg1})`,
+            }}
+          />
+        </Background>
+        <div className={styles.content}>
+          <Title text={'Hello'} />
+        </div>
+      </Parallax>
+      <Parallax strength={300} className="Hello">
+        <Background>
+          <div
+            style={{
+              minHeight: '100vh',
+              backgroundImage: `url(${bg2})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+        </Background>
+        <div className="Content"></div>
+      </Parallax>
+      <Parallax
+        bgImage={bg3}
+        bgStyle={{ height: '100vh' }}
+        bgImageAlt="the dog"
+        strength={300}
+        className="Hello"
+      >
+        <div className="Content"></div>
+      </Parallax>
+    </div>
   );
 };
 
 Image.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
 };
