@@ -14,30 +14,48 @@ import bg5 from '../../assets/img/Studio3.webp';
 export const PresentationPage = () => {
   return (
     <div className="Test">
-      <Parallax strength={300} className="Hello">
-        <Background>
-          <div
-            className={styles.background}
-            style={{
-              backgroundImage: `url(${bg1})`,
-            }}
-          />
-        </Background>
-        <div className={styles.content}>
-          <Title text={'Hello'} />
-        </div>
+      {/*<Parallax strength={300} className="Hello">*/}
+      {/*  <Background>*/}
+      {/*    <div*/}
+      {/*      className={styles.background}*/}
+      {/*      style={{*/}
+      {/*        backgroundImage: `url(${bg1})`,*/}
+      {/*      }}*/}
+      {/*    />*/}
+      {/*  </Background>*/}
+      {/*  <div className={styles.content}>*/}
+      {/*    <Title text={'Hello'} />*/}
+      {/*  </div>*/}
+      {/*</Parallax>*/}
+      {/*<Parallax strength={300} className="Hello">*/}
+      {/*  <Background>*/}
+      {/*    <div*/}
+      {/*      style={{*/}
+      {/*        minHeight: '100vh',*/}
+      {/*        backgroundImage: `url(${bg2})`,*/}
+      {/*        backgroundSize: 'cover',*/}
+      {/*        backgroundPosition: 'center',*/}
+      {/*      }}*/}
+      {/*    />*/}
+      {/*  </Background>*/}
+      {/*  <div className="Content"></div>*/}
+      {/*</Parallax>*/}
+      <Parallax
+        bgImage={bg1}
+        bgStyle={{ height: '100vh' }}
+        bgImageAlt="the dog"
+        strength={300}
+        className="Hello"
+      >
+        <div className="Content"></div>
       </Parallax>
-      <Parallax strength={300} className="Hello">
-        <Background>
-          <div
-            style={{
-              minHeight: '100vh',
-              backgroundImage: `url(${bg2})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-        </Background>
+      <Parallax
+        bgImage={bg2}
+        bgStyle={{ height: '100vh' }}
+        bgImageAlt="the dog"
+        strength={300}
+        className="Hello"
+      >
         <div className="Content"></div>
       </Parallax>
       <Parallax
