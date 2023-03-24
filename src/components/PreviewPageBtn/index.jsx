@@ -3,11 +3,17 @@ import './PreviewPageBtn.scss';
 
 export const PreviewPageBtn = () => {
   const btn = React.useRef(null);
-
+  const onClickHandler = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    });
+  };
   return (
     <span
       ref={btn}
       className="btn"
+      onClick={onClickHandler}
       onMouseMove={(e) => {
         const position = btn.current.getBoundingClientRect();
         const x = e.pageX - position.left - position.width / 2;

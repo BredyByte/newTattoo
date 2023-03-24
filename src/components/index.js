@@ -7,3 +7,5 @@ export { ToSectionBtn } from './ToSectionBtn';
 export { FullPageTilt } from './FullPageTilt';
 export { PreviewPageBtn } from './PreviewPageBtn';
 export { MenuBar } from './MenuBar';
+export { CustomBtn } from './CustomBtn';
+export { SmallFooter } from './SmallFooter';

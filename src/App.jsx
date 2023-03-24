@@ -1,5 +1,5 @@
 import React from 'react';
-import { CombinedContFoot } from './sections';
+import { CombinedContFoot, NewFooter } from './sections';
 import {} from './components';
 import { PreliminaryPage, Home } from './pages';
 
@@ -14,9 +14,8 @@ export const App = () => {
         position: 'relative',
       }}
     >
-      {/*<PreliminaryPage />*/}
+      <PreliminaryPage />
       <Home />
-      {/*<CombinedContFoot />*/}
     </div>
   );
 };

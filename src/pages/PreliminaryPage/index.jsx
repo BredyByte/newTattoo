@@ -4,6 +4,7 @@ import { FullPageTilt } from '../../components';
 export const PreliminaryPage = () => {
   return (
     <div
+      id="PreliminaryPage"
       style={{
         minHeight: '100vh',
         overflow: 'hidden',

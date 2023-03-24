@@ -5,7 +5,7 @@ import {
   CombinedContFoot,
   NewFooter,
 } from '../../sections/';
-import { MenuBar } from '../../components';
+import { MenuBar, SmallFooter } from '../../components';
 import grayBg from '../../assets/img/grayBg.webp';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './Home.module.scss';
@@ -15,7 +15,7 @@ export const Home = () => {
     <>
       <MenuBar />
       <PresentationPage />
-      <NewFooter />
+      <SmallFooter />
       {/*<CombinedContFoot />*/}
     </>
   );

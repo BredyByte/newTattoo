@@ -64,9 +64,9 @@ export const FullPageTilt = () => {
           className="contentContainer"
         >
           <Logo className="logo" />
-          <div className="title secondaryFont">Creamos Milagros</div>
+          <div className="title secondaryFont">Black Rituals Tattoo</div>
           <div className="subtitle secondaryFont">
-            <span className="subtitleText">Los mejores tatuajes</span>
+            <span className="subtitleText"></span>
             <PreviewPageBtn />
           </div>
         </motion.div>
