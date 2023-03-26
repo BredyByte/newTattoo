@@ -5,18 +5,13 @@ import PropTypes from 'prop-types';
 import { Title } from '../../components';
 import { presentationPageData } from '../../assets';
 import { CustomBtn } from '../../components/CustomBtn';
+import { ScrollDown, ScrollTop } from '../../utils';
 
 function handleScrollDirection(direction) {
   if (direction === 'down') {
-    window.scrollBy({
-      top: window.innerHeight,
-      behavior: 'smooth',
-    });
+    ScrollTop();
   } else {
-    window.scrollBy({
-      top: -window.innerHeight,
-      behavior: 'smooth',
-    });
+    ScrollDown();
   }
 }
 

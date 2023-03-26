@@ -7,30 +7,29 @@ import {
   useTransform,
   useViewportScroll,
 } from 'framer-motion';
-import grayBg from '../../assets/img/grayBg.webp';
+import grayBg from '../../assets/img/Studio7.webp';
 
 export const NewFooter = () => {
-  // const ref = React.useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ['start end', 'end end'],
-  // });
-  // const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
+  const ref = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end end'],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   return (
-    // <motion.div
-    //   ref={ref}
-    //   className={styles.root}
-    //   style={{
-    //     backgroundImage: `url(${grayBg})`,
-    //     backgroundPositionY: y,
-    //   }}
-    // >
-    <div
+    <motion.div
+      ref={ref}
       className={styles.root}
       style={{
         backgroundImage: `url(${grayBg})`,
       }}
     >
+      {/*<div*/}
+      {/*  className={styles.root}*/}
+      {/*  style={{*/}
+      {/*    backgroundImage: `url(${grayBg})`,*/}
+      {/*  }}*/}
+      {/*>*/}
       <div className={`${styles.contentContainer} container`}>
         <div className={styles.imgContainer}>
           <TextLogo className={styles.logo} />
@@ -55,6 +54,6 @@ export const NewFooter = () => {
           <li>Lunes - Viernes</li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };

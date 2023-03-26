@@ -3,7 +3,7 @@ import Tilt from 'react-parallax-tilt';
 import img from '../../assets/img/firstPageBg1.png';
 import { ReactComponent as Logo } from '../../assets/icons/Logo.svg';
 import './TestTilt.scss';
-import { PreviewPageBtn } from '../PreviewPageBtn';
+import { ArrowBtn } from '../PreviewPageBtn';
 import { motion } from 'framer-motion';
 
 export const FullPageTilt = () => {
@@ -31,7 +31,7 @@ export const FullPageTilt = () => {
             <div className="title secondaryFont">Creamos Milagros</div>
             <div className="subtitle secondaryFont">
               <span className="subtitleText">Los mejores tatuajes</span>
-              <PreviewPageBtn />
+              <ArrowBtn moving={true} text="Enter" />
             </div>
           </motion.div>
         </div>
@@ -67,7 +67,7 @@ export const FullPageTilt = () => {
           <div className="title secondaryFont">Black Rituals Tattoo</div>
           <div className="subtitle secondaryFont">
             <span className="subtitleText"></span>
-            <PreviewPageBtn />
+            <ArrowBtn moving={true} text="Enter" />
           </div>
         </motion.div>
       </div>
