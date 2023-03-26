@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
-import { ReactComponent as Logo } from '../../assets/icons/Logo.svg';
 
 const arr = ['Home', 'About', 'Service', 'Works', 'Shop', 'Contacts'];
 

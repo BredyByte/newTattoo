@@ -16,7 +16,7 @@ export const Home = () => {
       <MenuBar />
       <NavArrows />
       <PresentationPage />
-      <SmallFooter />
+      {/*<SmallFooter />*/}
       {/*<NewFooter />*/}
     </>
   );

@@ -8,9 +8,6 @@ export const App = () => {
     <div
       className="App"
       style={{
-        // background: 'black',
-        // minHeight: '100vh',
-        // overflow: 'hidden',
         position: 'relative',
       }}
     >

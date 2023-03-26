@@ -54,7 +54,7 @@
   @include btn-border-drawing(gray, white, 2px, bottom, right);
 }
 
-.btn {
+.root {
   background: none;
   border: none;
   cursor: pointer;

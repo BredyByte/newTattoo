@@ -4,14 +4,14 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { Title } from '../../components';
 import { presentationPageData } from '../../assets';
-import { CustomBtn } from '../../components/CustomBtn';
+import { SquareBtn } from '../../components';
 import { ScrollDown, ScrollTop } from '../../utils';
 
 function handleScrollDirection(direction) {
   if (direction === 'down') {
-    ScrollTop();
-  } else {
     ScrollDown();
+  } else {
+    ScrollTop();
   }
 }
 
@@ -36,33 +36,33 @@ const Section = ({ img, title, index, btnText }) => {
         style={index % 2 === 0 ? { right: '0' } : { left: '0' }}
       >
         <Title text={title} />
-        <CustomBtn text={btnText} />
+        <SquareBtn text={btnText} />
       </div>
     </section>
   );
 };
 
 export const PresentationPage = () => {
-  let lastScrollTime = 0;
-  const scrollDelay = 500;
-
-  const onWheelScroll = (event) => {
-    const currentTime = Date.now();
-    if (currentTime - lastScrollTime < scrollDelay) {
-      event.preventDefault();
-      return false;
-    }
-    lastScrollTime = currentTime;
-    const direction = event.deltaY > 0 ? 'down' : 'up';
-    handleScrollDirection(direction);
-  };
+  // let lastScrollTime = 0;
+  // const scrollDelay = 500;
+  //
+  // const onWheelScroll = (event) => {
+  //   const currentTime = Date.now();
+  //   if (currentTime - lastScrollTime < scrollDelay) {
+  //     event.preventDefault();
+  //     return false;
+  //   }
+  //   lastScrollTime = currentTime;
+  //   const direction = event.deltaY > 0 ? 'down' : 'up';
+  //   handleScrollDirection(direction);
+  // };
 
   React.useEffect(() => {
     document.querySelector('html').style.overflow = 'hidden';
-    window.addEventListener('wheel', onWheelScroll);
+    // window.addEventListener('wheel', onWheelScroll);
     return () => {
       document.querySelector('html').style.overflow = 'null';
-      window.removeEventListener('wheel', onWheelScroll);
+      // window.removeEventListener('wheel', onWheelScroll);
     };
   }, []);
   return (

@@ -1,4 +1,4 @@
-.parallaxEffect {
+.root {
   background-size: cover;
   position: absolute;
   top: 0;
@@ -32,7 +32,6 @@
       transform-style: preserve-3d;
       height: 290px;
       width: 100%;
-      transform: scale(4);
 
       .logo {
         position: relative;

@@ -1,0 +1,79 @@
+.root {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  .btnGiometry {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    .arrow {
+      box-sizing: border-box;
+      margin: 0px;
+      min-width: 0px;
+      pointer-events: none;
+      position: absolute;
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.45s ease-out 0.35s, transform 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0.35s;
+      transform: translate3d(0px, -20px, 0px) rotate(90deg);
+      &::before {
+        left: 0;
+        width: 35px;
+        top: 50%;
+        transform: translate3d(0px, -50%, 0px);
+        content: "";
+        height: 1px;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+      }
+      &::after {
+        right: 31px;
+        top: 50%;
+        transform: translate3d(0px, -50%, 0px);
+        content: "";
+        position: absolute;
+        display: inline-block;
+        height: 0px;
+        width: 0px;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-left: 3px solid rgb(255, 255, 255);
+        border-left: 4px solid;
+      }
+    }
+    .circleContainer {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      transition-property: width, height;
+      transition-duration: .5s;
+      transition-timing-function: ease;
+      .circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: transparent;
+        border: 1px solid white;
+        opacity: 0.3;
+        transition: transform 0.10s linear;
+      }
+    }
+  }
+  .btnText {
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+  }
+  &:hover .btnGiometry .arrow {
+    transform: translate3d(0px, -2px, 0px) rotate(90deg);
+  }
+  &:hover .btnGiometry .circleContainer {
+    width: 60px;
+    height: 60px;
+  }
+}
