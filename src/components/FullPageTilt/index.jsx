@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from '../../assets/icons/Logo.svg';
 import styles from './FullPageTilt.module.scss';
 import { ArrowBtn } from '../';
 import { ScrollDown } from '../../utils';
+import PropTypes from 'prop-types';
 
 export const FullPageTilt = () => {
   if (window.innerWidth <= 620) {

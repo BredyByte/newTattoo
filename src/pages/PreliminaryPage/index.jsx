@@ -1,5 +1,6 @@
 import React from 'react';
 import { FullPageTilt } from '../../components';
+import PropTypes from 'prop-types';
 
 export const PreliminaryPage = () => {
   return (

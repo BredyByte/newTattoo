@@ -1,6 +1,7 @@
 import React from 'react';
 import { CombinedContFoot, NewFooter } from './sections';
-import {} from './components';
+import { CustomCursor } from './components';
+import { motion } from 'framer-motion';
 import { PreliminaryPage, Home } from './pages';
 
 export const App = () => {
@@ -11,7 +12,6 @@ export const App = () => {
         position: 'relative',
       }}
     >
-      <PreliminaryPage />
       <Home />
     </div>
   );
