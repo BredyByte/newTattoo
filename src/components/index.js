@@ -1,4 +1,4 @@
-export { Title } from './Title';
+export { TitleHomeSections } from './TitleHomeSections';
 export { MapModal } from './MapModal';
 export { MapCurtain } from './MapCurtain';
 export { Map } from './Map';

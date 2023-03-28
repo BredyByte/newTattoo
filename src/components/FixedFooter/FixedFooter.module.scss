@@ -1,9 +1,15 @@
 .root {
   position: fixed;
-  bottom: 0;
+  bottom: -100px;
   right: 0;
   height: 100px;
   width: 100%;
-  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  background: black;
   z-index: 2;
+  transition: all .5s ease;
+  &.active {
+    bottom: 0;
+    opacity: 1;
+  }
 }

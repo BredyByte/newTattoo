@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './PresentationPage.module.scss';
+import styles from './HomeSections.module.scss';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { Title } from '../../components';
+import { TitleHomeSections } from '../../components';
 import { presentationPageData } from '../../assets';
 import { SquareBtn } from '../../components';
 import { ScrollDown, ScrollTop } from '../../utils';
@@ -21,7 +21,7 @@ const Section = ({ img, title, index, btnText }) => {
     target: ref,
     offset: ['start end', 'end end'],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ['-50%', '0%']);
+  const y = useTransform(scrollYProgress, [0, 1], ['-60%', '0%']);
   return (
     <section ref={ref} className={styles.presentationSection}>
       <motion.div
@@ -35,14 +35,14 @@ const Section = ({ img, title, index, btnText }) => {
         className={styles.content}
         style={index % 2 === 0 ? { right: '0' } : { left: '0' }}
       >
-        <Title text={title} />
+        <TitleHomeSections text={title} />
         <SquareBtn text={btnText} />
       </div>
     </section>
   );
 };
 
-export const PresentationPage = () => {
+export const HomeSections = () => {
   // let lastScrollTime = 0;
   // const scrollDelay = 500;
   //

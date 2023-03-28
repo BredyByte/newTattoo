@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contacts.module.scss';
-import { MapCurtain, Title, Map } from '../../components';
+import { MapCurtain, Map } from '../../components';
 import { ReactComponent as MapI } from '../../assets/icons/Map.svg';
 import { ReactComponent as PhoneI } from '../../assets/icons/Phone.svg';
 import { ReactComponent as InstI } from '../../assets/icons/Inst.svg';
@@ -9,7 +9,7 @@ export const Contacts = () => {
   return (
     <div className={styles.root}>
       <div className={styles.contentContainer}>
-        <Title text="Contacts" />
+        {/*<Title text="Contacts" />*/}
         <ul className={styles.list}>
           <li className={styles.listItem}>
             <InstI />

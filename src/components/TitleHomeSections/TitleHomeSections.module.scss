@@ -1,6 +1,9 @@
-@import './src/scss/fonts';
-
-.root {
+.container {
+  overflow: hidden;
+  padding: 20px 0 0 20px;
+}
+.title {
+  position: relative;
   font-size: 96px;
   font-weight: 400;
   line-height: 1;

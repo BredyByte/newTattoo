@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
+import PropTypes from 'prop-types';
 
 const arr = ['Home', 'About', 'Service', 'Works', 'Shop', 'Contacts'];
 
-export const MenuBar = () => {
-  const [isBackground, setIsBackground] = React.useState(false);
+export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   // const disableScroll = () => {
@@ -31,20 +31,8 @@ export const MenuBar = () => {
       document.addEventListener('touchmove', handleTouchMove);
     }
   };
-
-  const handleScroll = () => {
-    const scrollTop = window.pageYOffset;
-    scrollTop > 50 ? setIsBackground(true) : setIsBackground(false);
-  };
-
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   return (
-    <nav className={`${styles.root} ${isBackground ? styles.active : ''}`}>
+    <nav className={`${styles.root} ${isScrolled ? styles.active : ''}`}>
       <LogoText className={styles.logo} />
       <menu className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}>
         {arr.map((i) => (
@@ -63,4 +51,8 @@ export const MenuBar = () => {
       </button>
     </nav>
   );
+};
+
+MenuBar.propTypes = {
+  isScrolled: PropTypes.bool.isRequired,
 };

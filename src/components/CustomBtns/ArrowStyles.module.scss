@@ -4,7 +4,7 @@
   cursor: pointer;
   display: inline-block;
   color: white;
-  .btnGiometry {
+  .btnGeometry {
     position: relative;
     width: 70px;
     height: 70px;
@@ -68,12 +68,25 @@
     width: 100%;
     bottom: 0;
     text-align: center;
+    font-size: 24px;
   }
-  &:hover .btnGiometry .arrow {
+  &:hover .btnGeometry .arrow {
     transform: translate3d(0px, -2px, 0px) rotate(90deg);
   }
-  &:hover .btnGiometry .circleContainer {
+  &:hover .btnGeometry .circleContainer {
     width: 60px;
     height: 60px;
+  }
+  &.disabled {
+    .btnGeometry {
+      .arrow {
+        transform: translate3d(0px, -2px, 0px) rotate(90deg);
+        opacity: 0.5;
+      }
+      .circleContainer {
+        width: 60px;
+        height: 60px;
+      }
+    }
   }
 }

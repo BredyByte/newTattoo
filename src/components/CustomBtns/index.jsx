@@ -8,13 +8,16 @@ export const ArrowBtn = ({
   onClickHandler,
   additionalStyles,
   text = '',
+  isDisable,
 }) => {
   if (moving) {
     const btn = React.useRef(null);
     return (
       <span
         ref={btn}
-        className={arrowStyles.root}
+        className={`${arrowStyles.root} ${
+          isDisable ? arrowStyles.disabled : ''
+        }`}
         onClick={onClickHandler}
         onMouseMove={(e) => {
           const position = btn.current.getBoundingClientRect();
@@ -30,7 +33,7 @@ export const ArrowBtn = ({
         }}
         style={additionalStyles && additionalStyles}
       >
-        <div className={arrowStyles.btnGiometry}>
+        <div className={arrowStyles.btnGeometry}>
           <div className={arrowStyles.arrow}></div>
           <div className={arrowStyles.circleContainer}>
             <div className={arrowStyles.circle}></div>
@@ -42,17 +45,19 @@ export const ArrowBtn = ({
   } else {
     return (
       <span
-        className={arrowStyles.root}
+        className={`${arrowStyles.root} ${
+          isDisable ? arrowStyles.disabled : ''
+        }`}
         onClick={onClickHandler}
         style={additionalStyles && additionalStyles}
       >
-        <div className={arrowStyles.btnGiometry}>
+        <div className={arrowStyles.btnGeometry}>
           <div className={arrowStyles.arrow}></div>
           <div className={arrowStyles.circleContainer}>
             <div className={arrowStyles.circle}></div>
           </div>
         </div>
-        <div className={arrowStyles.btnTitle}>{text}</div>
+        <div className={arrowStyles.btnText}>{text}</div>
       </span>
     );
   }
@@ -74,6 +79,7 @@ ArrowBtn.propTypes = {
   onClickHandler: PropTypes.func,
   additionalStyles: PropTypes.object,
   text: PropTypes.string,
+  isDisable: PropTypes.bool,
 };
 
 SquareBtn.propTypes = {

@@ -6,9 +6,10 @@ import styles from './FullPageTilt.module.scss';
 import { ArrowBtn } from '../';
 import { ScrollDown } from '../../utils';
 import PropTypes from 'prop-types';
+import { isMobile } from '../../utils';
 
 export const FullPageTilt = () => {
-  if (window.innerWidth <= 620) {
+  if (isMobile()) {
     return (
       <div
         className={styles.root}

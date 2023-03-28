@@ -22,3 +22,45 @@ export const navAnimation = {
   hidden: { y: -20, opacity: 0 },
   show: { y: 1, opacity: 1 },
 };
+
+export const textFromRightAppearance = (delay = 0.2, duration = 0.4) => ({
+  hidden: {
+    right: '-50%',
+  },
+  show: {
+    right: '0px',
+    transition: {
+      duration,
+      type: 'tween',
+      delay,
+    },
+  },
+});
+
+export const textFromLeftAppearance = (delay = 0.2, duration = 0.4) => ({
+  hidden: {
+    left: '-50%',
+  },
+  show: {
+    left: '0px',
+    transition: {
+      duration,
+      type: 'tween',
+      delay,
+    },
+  },
+});
+
+export const textFromBottomAppearance = (delay = 0.2, duration = 0.4) => ({
+  offscreen: {
+    top: '-100px',
+  },
+  onscreen: {
+    top: '0px',
+    transition: {
+      duration,
+      type: 'tween',
+      delay,
+    },
+  },
+});
