@@ -36,7 +36,7 @@
       .logo {
         position: relative;
         left: -25px;
-        transform: translateZ(100px);
+        transform: translateZ(50px);
         width: 100%;
         height: 100%;
         filter: drop-shadow(2px 2px 3px rgb(0, 0,0));
@@ -47,14 +47,14 @@
         left: 0;
         right: 0;
         bottom: 90%;
-        transform: translateZ(50px);
+        transform: translateZ(75px);
         color: white;
         line-height: 1;
         font-size: calc((65vw - 4.5rem) / 7);
         text-shadow: 3px 3px 4px black;
       }
 
-      .subtitle {
+      .btnContainer {
         position: absolute;
         top: 100%;
         left: 0;
@@ -68,44 +68,71 @@
         align-items: center;
         justify-content: center;
         text-shadow: 3px 3px 4px black;
-
-        .subtitleText {
-          margin-bottom: 20px;
-          font-size: calc((45vw - 4.5rem) / 7);
+        margin-top: 25px;
+      }
+    }
+  }
+}
+@media(max-width: 1400px) {
+  .root {
+    .innerElement {
+      .contentContainer {
+        height: 260px;
+        .title {
+          font-size: 120px;
+        }
+        .btnContainer {
+          padding-right: 5px;
+          margin-top: 20px;
         }
       }
     }
   }
 }
-@media(max-width: 1040px) {
-  .parallaxEffect {
+//@media (max-width: 992px) {
+//  .root {
+//    .innerElement {
+//      .contentContainer {
+//        height: 230px;
+//        .title {
+//          font-size: 120px;
+//        }
+//        .btnContainer {
+//          padding-right: 10px;
+//          margin-bottom: 20px;
+//        }
+//      }
+//    }
+//  }
+//}
+@media (max-width: 768px) {
+  .root {
     .innerElement {
       .contentContainer {
         height: 230px;
         .title {
-          font-size: calc(100vw / 10);
+          font-size: 80px;
+          margin-bottom: 20px;
         }
-        .subtitle {
-          .subtitleText {
-            font-size: calc(100vw / 10);
-          }
+        .btnContainer {
+          margin-top: 10px;
+          padding-right: 10px;
         }
       }
     }
   }
 }
-@media(max-width: 620px) {
-  .parallaxEffect {
+@media (max-width: 576px) {
+  .root {
     .innerElement {
       .contentContainer {
         height: 190px;
         .title {
-          font-size: calc(100vw / 5);
+          font-size: 65px;
+          margin-bottom: 20px;
         }
-        .subtitle {
-          .subtitleText {
-            font-size: calc(100vw / 6);
-          }
+        .btnContainer {
+          padding-right: 19px;
         }
       }
     }

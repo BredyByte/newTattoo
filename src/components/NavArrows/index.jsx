@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './NavArrows.module.scss';
 import { ArrowBtn } from '../';
-import { ScrollDown, ScrollTop } from '../../utils';
+import { scrollTop, scrollDown } from '../../utils';
 import PropTypes from 'prop-types';
 
 export const NavArrows = ({ isScrolled, isEndOfPage }) => {
@@ -9,13 +9,20 @@ export const NavArrows = ({ isScrolled, isEndOfPage }) => {
     <div className={`${styles.root} ${isScrolled ? styles.isOpen : ''}`}>
       <ArrowBtn
         moving={false}
-        onClickHandler={ScrollTop}
-        additionalStyles={{ transform: 'rotate(180deg)', marginBottom: '40px' }}
+        onClickHandler={scrollTop}
+        additionalStyles={{
+          transform: 'rotate(180deg)',
+          marginBottom: '40px',
+          padding: '1px',
+        }}
       />
       <ArrowBtn
         moving={false}
-        onClickHandler={ScrollDown}
+        onClickHandler={scrollDown}
         isDisable={isEndOfPage}
+        additionalStyles={{
+          marginLeft: '1.5px',
+        }}
       />
     </div>
   );

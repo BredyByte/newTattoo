@@ -15,7 +15,7 @@ export const ArrowBtn = ({
     return (
       <span
         ref={btn}
-        className={`${arrowStyles.root} ${
+        className={`${arrowStyles.root} ${arrowStyles.forTilt} ${
           isDisable ? arrowStyles.disabled : ''
         }`}
         onClick={onClickHandler}

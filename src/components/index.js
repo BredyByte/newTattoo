@@ -4,7 +4,7 @@ export { MapCurtain } from './MapCurtain';
 export { Map } from './Map';
 export { Slider } from './Slider';
 export { ToSectionBtn } from './ToSectionBtn';
-export { FullPageTilt } from './FullPageTilt';
+export { TiltPage } from './TiltPage';
 export { MenuBar } from './MenuBar';
 export { ArrowBtn, SquareBtn } from './CustomBtns';
 export { FixedFooter } from './FixedFooter';

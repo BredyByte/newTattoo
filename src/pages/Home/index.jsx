@@ -1,25 +1,18 @@
 import React from 'react';
-import {
-  HomeSections,
-  Footer,
-  CombinedContFoot,
-  NewFooter,
-} from '../../sections/';
+import { HomeSections, TiltPageContainer } from '../../sections/';
 import {
   MenuBar,
   NavArrows,
   CustomCursor,
   FixedFooter,
 } from '../../components';
-import grayBg from '../../assets/img/grayBg.webp';
-import { useScroll, useTransform, motion } from 'framer-motion';
-import styles from './Home.module.scss';
-import { PreliminaryPage } from '../PreliminaryPage';
+import { useIsMobile } from '../../utils';
 
 export const Home = () => {
+  const isMobile = useIsMobile();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isEndOfPage, setIsEndOfPage] = React.useState(false);
-  const handleScrollTest = () => {
+  const CheckScrolledToEnd = () => {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -33,25 +26,33 @@ export const Home = () => {
     scrollTop > 50 ? setIsScrolled(true) : setIsScrolled(false);
   };
   React.useEffect(() => {
-    window.addEventListener('scroll', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto', // Мгновенный скроллинг
+    });
+    window.window.addEventListener('scroll', () => {
       handleScroll();
-      handleScrollTest();
+      CheckScrolledToEnd();
     });
     return () => {
       window.removeEventListener('scroll', () => {
         handleScroll();
-        handleScrollTest();
+        CheckScrolledToEnd();
       });
     };
   }, []);
   return (
     <>
-      <PreliminaryPage />
+      <TiltPageContainer isMobile={isMobile} />
       <MenuBar isScrolled={isScrolled} />
-      <NavArrows isScrolled={isScrolled} isEndOfPage={isEndOfPage} />
-      <CustomCursor />
-      <HomeSections />
-      <FixedFooter isEndOfPage={isEndOfPage} />
+      {!isMobile && (
+        <>
+          <CustomCursor />
+          <NavArrows isScrolled={isScrolled} isEndOfPage={isEndOfPage} />
+        </>
+      )}
+      <HomeSections isMobile={isMobile} />
+      {/*<FixedFooter isEndOfPage={isEndOfPage} />*/}
     </>
   );
 };

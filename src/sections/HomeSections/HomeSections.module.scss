@@ -3,7 +3,7 @@
   position: relative;
   scroll-snap-align: center;
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
 
   .background {
     position: absolute;
@@ -42,5 +42,23 @@
   flex-direction: column;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .content {
+    position: absolute;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: grayscale(1) blur(2px);
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    min-width: 80%;
+    width: auto;
+    height: 60%;
+    padding: 0 0 0 20px;
+    transform: translateY(-50%);
+  }
 }

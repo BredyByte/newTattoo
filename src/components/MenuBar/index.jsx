@@ -2,32 +2,21 @@ import React from 'react';
 import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
 import PropTypes from 'prop-types';
+import { enableScroll, disableScroll } from '../../utils';
 
 const arr = ['Home', 'About', 'Service', 'Works', 'Shop', 'Contacts'];
 
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  // const disableScroll = () => {
-  //   const scrollBarWidth =
-  //     window.innerWidth - document.documentElement.clientWidth;
-  //   document.body.style.marginRight = scrollBarWidth + 'px';
-  //   document.body.style.overflowY = 'hidden';
-  // };
-  //
-  // const enableScroll = () => {
-  //   document.body.style.marginRight = '';
-  //   document.body.style.overflowY = 'auto';
-  // };
-
   const handleButtonClick = () => {
     const handleTouchMove = (e) => e.preventDefault();
     setIsOpen((prev) => !prev);
     if (isOpen) {
-      // enableScroll();
+      enableScroll();
       document.removeEventListener('touchmove', handleTouchMove);
     } else {
-      // disableScroll();
+      disableScroll();
       document.addEventListener('touchmove', handleTouchMove);
     }
   };

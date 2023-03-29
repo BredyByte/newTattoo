@@ -5,15 +5,14 @@ import PropTypes from 'prop-types';
 import { TitleHomeSections } from '../../components';
 import { presentationPageData } from '../../assets';
 import { SquareBtn } from '../../components';
-import { ScrollDown, ScrollTop } from '../../utils';
 
-function handleScrollDirection(direction) {
-  if (direction === 'down') {
-    ScrollDown();
-  } else {
-    ScrollTop();
-  }
-}
+// function handleScrollDirection(direction) {
+//   if (direction === 'down') {
+//     scrollDown();
+//   } else {
+//     scrollTop();
+//   }
+// }
 
 const Section = ({ img, title, index, btnText }) => {
   const ref = React.useRef(null);
@@ -42,7 +41,7 @@ const Section = ({ img, title, index, btnText }) => {
   );
 };
 
-export const HomeSections = () => {
+export const HomeSections = ({ isMobile }) => {
   // let lastScrollTime = 0;
   // const scrollDelay = 500;
   //
@@ -58,10 +57,10 @@ export const HomeSections = () => {
   // };
 
   React.useEffect(() => {
-    document.querySelector('html').style.overflow = 'hidden';
+    if (!isMobile) document.querySelector('html').style.overflow = 'hidden';
     // window.addEventListener('wheel', onWheelScroll);
     return () => {
-      document.querySelector('html').style.overflow = 'null';
+      if (!isMobile) document.querySelector('html').style.overflow = 'null';
       // window.removeEventListener('wheel', onWheelScroll);
     };
   }, []);
@@ -85,4 +84,7 @@ Section.propTypes = {
   title: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
   btnText: PropTypes.string.isRequired,
+};
+HomeSections.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
 };

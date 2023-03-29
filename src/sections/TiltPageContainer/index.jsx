@@ -1,11 +1,11 @@
 import React from 'react';
-import { FullPageTilt } from '../../components';
+import { TiltPage } from '../../components';
 import PropTypes from 'prop-types';
 
-export const PreliminaryPage = () => {
+export const TiltPageContainer = ({ isMobile }) => {
   return (
     <div
-      id="PreliminaryPage"
+      id="TiltPageContainer"
       style={{
         minHeight: '100vh',
         overflow: 'hidden',
@@ -14,7 +14,11 @@ export const PreliminaryPage = () => {
         scrollSnapAlign: 'center',
       }}
     >
-      <FullPageTilt />
+      <TiltPage isMobile={isMobile} />
     </div>
   );
+};
+
+TiltPageContainer.propTypes = {
+  isMobile: PropTypes.bool,
 };

@@ -1,15 +1,14 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
 import img from '../../assets/img/firstPageBg1.png';
-import { ReactComponent as Logo } from '../../assets/icons/Logo.svg';
-import styles from './FullPageTilt.module.scss';
+import { ReactComponent as Logo } from '../../assets/icons/LogoTilt.svg';
+import styles from './TiltPage.module.scss';
 import { ArrowBtn } from '../';
-import { ScrollDown } from '../../utils';
+import { scrollDown } from '../../utils';
 import PropTypes from 'prop-types';
-import { isMobile } from '../../utils';
 
-export const FullPageTilt = () => {
-  if (isMobile()) {
+export const TiltPage = ({ isMobile }) => {
+  if (isMobile) {
     return (
       <div
         className={styles.root}
@@ -23,12 +22,11 @@ export const FullPageTilt = () => {
             <div className={`${styles.title} secondaryFont`}>
               Black Rituals Tattoo
             </div>
-            <div className={`${styles.subtitle} secondaryFont`}>
-              <span className={styles.subtitleText}></span>
+            <div className={`${styles.btnContainer} secondaryFont`}>
               <ArrowBtn
                 moving={true}
                 text="Enter"
-                onClickHandler={ScrollDown}
+                onClickHandler={scrollDown}
               />
             </div>
           </div>
@@ -55,12 +53,15 @@ export const FullPageTilt = () => {
           <div className={`${styles.title} secondaryFont`}>
             Black Rituals Tattoo
           </div>
-          <div className={`${styles.subtitle} secondaryFont`}>
-            <span className={styles.subtitleText}></span>
-            <ArrowBtn moving={true} text="Enter" onClickHandler={ScrollDown} />
+          <div className={`${styles.btnContainer} secondaryFont`}>
+            <ArrowBtn moving={true} text="Enter" onClickHandler={scrollDown} />
           </div>
         </div>
       </div>
     </Tilt>
   );
+};
+
+TiltPage.propTypes = {
+  isMobile: PropTypes.bool,
 };
