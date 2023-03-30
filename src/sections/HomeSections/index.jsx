@@ -14,13 +14,17 @@ import { SquareBtn } from '../../components';
 //   }
 // }
 
-const Section = ({ img, title, index, btnText }) => {
+const Section = ({ img, title, index, btnText, isMobile }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'end end'],
+    offset: isMobile ? ['end start', 'end end'] : ['start end', 'end end'],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ['-60%', '0%']);
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? ['80%', '0%'] : ['-80%', '0%']
+  );
   return (
     <section ref={ref} className={styles.presentationSection}>
       <motion.div
@@ -73,6 +77,7 @@ export const HomeSections = ({ isMobile }) => {
           title={obj.title}
           index={index}
           btnText={obj.btnText}
+          isMobile={isMobile}
         />
       ))}
     </>
@@ -84,6 +89,7 @@ Section.propTypes = {
   title: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
   btnText: PropTypes.string.isRequired,
+  isMobile: PropTypes.bool.isRequired,
 };
 HomeSections.propTypes = {
   isMobile: PropTypes.bool.isRequired,

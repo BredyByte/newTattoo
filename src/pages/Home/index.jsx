@@ -42,7 +42,8 @@ export const Home = () => {
     };
   }, []);
   return (
-    <div id="Home" style={isMobile ? { overflow: 'hidden' } : undefined}>
+    // style={isMobile ? { overflow: 'hidden' } : undefined}
+    <div id="Home">
       <TiltPageContainer isMobile={isMobile} />
       <MenuBar isScrolled={isScrolled} />
       {!isMobile && (
