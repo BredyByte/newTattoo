@@ -28,7 +28,7 @@ export const Home = () => {
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'auto', // Мгновенный скроллинг
+      behavior: 'auto',
     });
     window.window.addEventListener('scroll', () => {
       handleScroll();
@@ -42,8 +42,7 @@ export const Home = () => {
     };
   }, []);
   return (
-    // style={isMobile ? { overflow: 'hidden' } : undefined}
-    <div id="Home">
+    <div id="Home" style={isMobile ? { overflow: 'hidden' } : undefined}>
       <TiltPageContainer isMobile={isMobile} />
       <MenuBar isScrolled={isScrolled} />
       {!isMobile && (
