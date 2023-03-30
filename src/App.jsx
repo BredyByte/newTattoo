@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home } from './pages';
+import { Preloader } from './sections/Preloader';
 
 export const App = () => {
   return (
@@ -9,6 +10,7 @@ export const App = () => {
         position: 'relative',
       }}
     >
+      {/*<Preloader />*/}
       <Home />
     </div>
   );

@@ -12,8 +12,17 @@
   transform-style: preserve-3d;
   transform: translateZ(100px);
   background-position: center center;
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 22px 70px 4px;
-
+  //
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //  width: 101%;
+  //  height: 101%;
+  //  background: rgba(0,0,0,0.3);
+  //  backdrop-filter: blur(3px);
+  //}
   .innerElement {
     position: relative;
     width: 100%;
@@ -89,22 +98,6 @@
     }
   }
 }
-//@media (max-width: 992px) {
-//  .root {
-//    .innerElement {
-//      .contentContainer {
-//        height: 230px;
-//        .title {
-//          font-size: 120px;
-//        }
-//        .btnContainer {
-//          padding-right: 10px;
-//          margin-bottom: 20px;
-//        }
-//      }
-//    }
-//  }
-//}
 @media (max-width: 768px) {
   .root {
     .innerElement {
