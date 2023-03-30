@@ -24,9 +24,10 @@ export const TiltPage = ({ isMobile }) => {
             </div>
             <div className={`${styles.btnContainer} secondaryFont`}>
               <ArrowBtn
-                moving={true}
+                moving={false}
                 text="Enter"
                 onClickHandler={scrollDown}
+                forTilt={true}
               />
             </div>
           </div>
@@ -54,7 +55,12 @@ export const TiltPage = ({ isMobile }) => {
             Black Rituals Tattoo
           </div>
           <div className={`${styles.btnContainer} secondaryFont`}>
-            <ArrowBtn moving={true} text="Enter" onClickHandler={scrollDown} />
+            <ArrowBtn
+              moving={true}
+              text="Enter"
+              onClickHandler={scrollDown}
+              forTilt={true}
+            />
           </div>
         </div>
       </div>

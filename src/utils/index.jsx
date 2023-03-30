@@ -15,13 +15,13 @@ export const scrollTop = () => {
 export const disableScroll = () => {
   const scrollBarWidth =
     window.innerWidth - document.documentElement.clientWidth;
-  document.body.style.marginRight = scrollBarWidth + 'px';
-  document.body.style.overflowY = 'hidden';
+  document.querySelector('html').style.marginRight = scrollBarWidth + 'px';
+  document.querySelector('html').style.overflowY = 'hidden';
 };
 
 export const enableScroll = () => {
-  document.body.style.marginRight = '';
-  document.body.style.overflowY = 'auto';
+  document.querySelector('html').style.marginRight = '';
+  document.querySelector('html').style.overflowY = 'auto';
 };
 
 export const useIsMobile = () => {

@@ -9,15 +9,15 @@ const arr = ['Home', 'About', 'Service', 'Works', 'Shop', 'Contacts'];
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const handleButtonClick = () => {
-    const handleTouchMove = (e) => e.preventDefault();
+  const handleButtonClick = (e) => {
+    e.preventDefault();
     setIsOpen((prev) => !prev);
     if (isOpen) {
       enableScroll();
-      document.removeEventListener('touchmove', handleTouchMove);
+      // document.removeEventListener('touchmove', handleTouchMove);
     } else {
       disableScroll();
-      document.addEventListener('touchmove', handleTouchMove);
+      // document.addEventListener('touchmove', handleTouchMove);
     }
   };
   return (

@@ -42,7 +42,7 @@ export const Home = () => {
     };
   }, []);
   return (
-    <>
+    <div id="Home" style={isMobile ? { overflow: 'hidden' } : undefined}>
       <TiltPageContainer isMobile={isMobile} />
       <MenuBar isScrolled={isScrolled} />
       {!isMobile && (
@@ -53,6 +53,6 @@ export const Home = () => {
       )}
       <HomeSections isMobile={isMobile} />
       {/*<FixedFooter isEndOfPage={isEndOfPage} />*/}
-    </>
+    </div>
   );
 };
