@@ -23,7 +23,7 @@ const Section = ({ img, title, index, btnText, isMobile }) => {
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    isMobile ? ['80%', '0%'] : ['-80%', '0%']
+    isMobile ? ['20%', '0%'] : ['-80%', '0%']
   );
   return (
     <section ref={ref} className={styles.presentationSection}>
