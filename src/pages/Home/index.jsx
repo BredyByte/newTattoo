@@ -41,9 +41,8 @@ export const Home = () => {
       });
     };
   }, []);
-  // style={isMobile ? { overflow: 'hidden' } : undefined}
   return (
-    <div id="Home">
+    <div id="Home" style={isMobile ? { overflow: 'hidden' } : undefined}>
       <TiltPageContainer isMobile={isMobile} />
       <MenuBar isScrolled={isScrolled} />
       {!isMobile && (

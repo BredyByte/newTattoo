@@ -98,18 +98,18 @@
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .root {
     .innerElement {
       .contentContainer {
-        height: 230px;
+        height: 190px;
         .title {
           font-size: 80px;
           margin-bottom: 20px;
         }
         .btnContainer {
-          margin-top: 10px;
-          padding-right: 10px;
+          margin-top: 12px;
+          padding-right: 18px;
         }
       }
     }

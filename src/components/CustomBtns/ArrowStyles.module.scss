@@ -108,18 +108,31 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .root.forTilt {
     .btnGeometry {
       width: 80px;
       height: 80px;
       .arrow {
         &::before {
-          left: -60px;
-          width: 90px;
+          left: -35px;
+          width: 70px;
         }
         &::after {
-          right: 45px;
+          right: 40px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .root.forTilt {
+    .btnGeometry {
+      width: 70px;
+      height: 70px;
+      .arrow {
+        &::after {
+          right: 32px;
         }
       }
     }
