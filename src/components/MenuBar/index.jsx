@@ -3,6 +3,7 @@ import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
 import PropTypes from 'prop-types';
 import { enableScroll, disableScroll } from '../../utils';
+import { Link } from 'react-router-dom';
 
 const arr = ['Home', 'About', 'Service', 'Works', 'Shop', 'Contacts'];
 
@@ -25,9 +26,9 @@ export const MenuBar = ({ isScrolled }) => {
       <LogoText className={styles.logo} />
       <menu className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}>
         {arr.map((i) => (
-          <li className={styles.menuItem} key={i}>
+          <Link to="contacts" className={styles.menuItem} key={i}>
             {i}
-          </li>
+          </Link>
         ))}
       </menu>
       <button

@@ -14,10 +14,9 @@ export const Map = () => {
   );
   const [map, setMap] = useState(null);
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY,
     libraries: ['places'],
   });
-
   if (!isLoaded) {
     return <div>Loading...</div>;
   }
