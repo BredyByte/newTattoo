@@ -1,10 +1,9 @@
 .root {
   overflow: hidden;
   position: relative;
-  padding-top: 180px;
   z-index: 2;
 }
-.background {
+.backgroundElem {
   position: absolute;
   top: 0;
   right: 0;
@@ -22,10 +21,5 @@
     top: 0px;
     right: 0;
     background-color: rgba(0, 0, 0, 0.4 );
-  }
-}
-@media(max-width: 1240px) {
-  .root {
-    padding-top: 100px;
   }
 }

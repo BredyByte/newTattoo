@@ -26,9 +26,9 @@ export const MenuBar = ({ isScrolled }) => {
       <LogoText className={styles.logo} />
       <menu className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}>
         {arr.map((i) => (
-          <Link to="contacts" className={styles.menuItem} key={i}>
+          <li className={styles.menuItem} key={i}>
             {i}
-          </Link>
+          </li>
         ))}
       </menu>
       <button

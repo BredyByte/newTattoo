@@ -9,9 +9,9 @@ input:-webkit-autofill
 {
   -webkit-box-shadow: 0 0 0 30px rgba(black, 0.5) inset !important;
 }
-::-webkit-scrollbar {
-  display: none;
-}
+//::-webkit-scrollbar {
+//  display: none;
+//}
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;

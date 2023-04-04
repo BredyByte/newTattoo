@@ -35,10 +35,11 @@
     font-weight: 700;
     li {
       text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-      transition: all 0.3s;
+      transition: all .5s;
       &:hover {
-        transform: translateY(3px);
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+        color: #D99938;
+        transform: translateY(5px);
+        text-shadow: 3px 3px 5px black;
       }
     }
   }

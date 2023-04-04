@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer, Contacts } from '../../sections';
+import { Footer, Contacts, NewFooter } from '../../sections';
 import { MenuBar } from '../../components';
 import grayBg from '../../assets/img/grayBg.webp';
 import styles from './ContactUs.module.scss';
@@ -10,9 +10,8 @@ export const ContactUs = () => {
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start', 'end start'],
-    // offset: ['start end', 'end end'],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ['0', '50%']);
+  const y = useTransform(scrollYProgress, [0, 1], ['0', '60%']);
   return (
     <div className={styles.root} ref={ref}>
       <MenuBar isScrolled={true} />
@@ -21,10 +20,10 @@ export const ContactUs = () => {
           y,
           backgroundImage: `url(${grayBg})`,
         }}
-        className={styles.background}
+        className={styles.backgroundElem}
       />
       <Contacts />
-      <Footer />
+      <NewFooter />
     </div>
   );
 };

@@ -64,7 +64,7 @@ export const HomeSections = ({ isMobile }) => {
     if (!isMobile) document.querySelector('html').style.overflow = 'hidden';
     // window.addEventListener('wheel', onWheelScroll);
     return () => {
-      if (!isMobile) document.querySelector('html').style.overflow = 'null';
+      if (!isMobile) document.querySelector('html').style.overflow = null;
       // window.removeEventListener('wheel', onWheelScroll);
     };
   }, []);
