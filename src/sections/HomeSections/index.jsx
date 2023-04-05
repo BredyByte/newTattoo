@@ -6,14 +6,6 @@ import { Title } from '../../components';
 import { presentationPageData } from '../../assets';
 import { SquareBtn } from '../../components';
 
-// function handleScrollDirection(direction) {
-//   if (direction === 'down') {
-//     scrollDown();
-//   } else {
-//     scrollTop();
-//   }
-// }
-
 const Section = ({ img, title, index, btnText, isMobile }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
@@ -46,26 +38,10 @@ const Section = ({ img, title, index, btnText, isMobile }) => {
 };
 
 export const HomeSections = ({ isMobile }) => {
-  // let lastScrollTime = 0;
-  // const scrollDelay = 500;
-  //
-  // const onWheelScroll = (event) => {
-  //   const currentTime = Date.now();
-  //   if (currentTime - lastScrollTime < scrollDelay) {
-  //     event.preventDefault();
-  //     return false;
-  //   }
-  //   lastScrollTime = currentTime;
-  //   const direction = event.deltaY > 0 ? 'down' : 'up';
-  //   handleScrollDirection(direction);
-  // };
-
   React.useEffect(() => {
     if (!isMobile) document.querySelector('html').style.overflow = 'hidden';
-    // window.addEventListener('wheel', onWheelScroll);
     return () => {
       if (!isMobile) document.querySelector('html').style.overflow = null;
-      // window.removeEventListener('wheel', onWheelScroll);
     };
   }, []);
   return (

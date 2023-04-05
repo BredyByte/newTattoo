@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 
 const arr = [
   { link: '/', title: 'Home' },
-  { link: 'about', title: 'About' },
-  { link: 'services', title: 'Services' },
-  { link: 'works', title: 'Works' },
-  { link: 'shop', title: 'Shop' },
-  { link: 'contacts', title: 'Contacts' },
+  { link: '/about', title: 'About' },
+  { link: '/services', title: 'Services' },
+  { link: '/works', title: 'Works' },
+  { link: '/shop', title: 'Shop' },
+  { link: '/contacts', title: 'Contacts' },
 ];
 
 export const MenuBar = ({ isScrolled }) => {
@@ -22,12 +22,16 @@ export const MenuBar = ({ isScrolled }) => {
       'ToggleMenu'
     ).style.minHeight = `${window.screen.height}px`;
   };
-  // if (deviceWidth.matches) {
-  //   window.addEventListener('resize', setHeight);
-  //   setHeight();
-  // }
   React.useEffect(() => {
-    setHeight();
+    if (deviceWidth.matches) {
+      window.addEventListener('resize', setHeight);
+      setHeight();
+    }
+    return () => {
+      if (deviceWidth.matches) {
+        window.removeEventListener('resize', setHeight);
+      }
+    };
   }, []);
 
   // React.useEffect(() => {
@@ -39,13 +43,6 @@ export const MenuBar = ({ isScrolled }) => {
   const handleButtonClick = (e) => {
     e.preventDefault();
     setIsOpen((prev) => !prev);
-    if (isOpen) {
-      enableScroll();
-      // document.removeEventListener('touchmove', handleTouchMove);
-    } else {
-      disableScroll();
-      // document.addEventListener('touchmove', handleTouchMove);
-    }
   };
   return (
     <nav className={`${styles.root} ${isScrolled ? styles.active : ''}`}>

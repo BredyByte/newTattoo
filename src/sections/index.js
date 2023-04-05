@@ -5,3 +5,4 @@ export { Services } from './Services';
 export { HomeSections } from './HomeSections';
 export { SlimFooter } from './SlimFooter';
 export { TiltPageContainer } from './TiltPageContainer';
+export { Preloader } from './Preloader';

@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 20px 0;
+  .message {
+    font-size: 26px;
+  }
+}

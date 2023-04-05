@@ -28,7 +28,6 @@ export const Home = () => {
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: 'auto',
     });
     window.window.addEventListener('scroll', () => {
       handleScroll();
@@ -41,6 +40,7 @@ export const Home = () => {
       });
     };
   }, []);
+
   return (
     <div id="Home" style={isMobile ? { overflow: 'hidden' } : undefined}>
       <TiltPageContainer isMobile={isMobile} />
@@ -52,7 +52,6 @@ export const Home = () => {
         </>
       )}
       <HomeSections isMobile={isMobile} />
-      {/*<FixedFooter isEndOfPage={isEndOfPage} />*/}
     </div>
   );
 };

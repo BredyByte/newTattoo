@@ -11,12 +11,13 @@ import {
   // useSubmit,
 } from 'react-router-dom';
 import { CustomCursor, MenuBar } from '../../components';
+import { Preloader } from '../../sections';
 import { useIsMobile } from '../../utils';
 
 export const Root = () => {
-  return (
-    <div id="Root">
-      <Outlet />
-    </div>
-  );
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  React.useEffect(() => {
+    setTimeout(() => setIsLoaded(true), 3000);
+  }, []);
+  return <div id="Root">{isLoaded ? <Outlet /> : <Preloader />}</div>;
 };

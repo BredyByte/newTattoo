@@ -13,6 +13,11 @@ export const WithFooterBgWrapper = ({ Component }) => {
     offset: ['start', 'end start'],
   });
   const y = useTransform(scrollYProgress, [0, 1], ['0', '60%']);
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
   return (
     <div className={styles.root} ref={ref}>
       <motion.div
