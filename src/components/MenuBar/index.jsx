@@ -17,6 +17,12 @@ const arr = [
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
+  React.useEffect(() => {
+    document.getElementById(
+      'ToggleMenu'
+    ).style.minHeight = `${window.innerHeight}px`;
+  }, []);
+
   const handleButtonClick = (e) => {
     e.preventDefault();
     setIsOpen((prev) => !prev);
@@ -31,7 +37,10 @@ export const MenuBar = ({ isScrolled }) => {
   return (
     <nav className={`${styles.root} ${isScrolled ? styles.active : ''}`}>
       <LogoText className={styles.logo} />
-      <menu className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}>
+      <menu
+        id="ToggleMenu"
+        className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}
+      >
         {arr.map((i, index) => (
           <Link to={i.link} className={styles.menuItem} key={index}>
             {i.title}
