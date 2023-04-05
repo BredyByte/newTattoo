@@ -16,12 +16,21 @@ const arr = [
 
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const setHeight = () => {
+    document.getElementById('ToggleMenu').style.minHeight =
+      window.innerHeight + 'px';
+  };
+  let deviceWidth = window.matchMedia('(max-width: 1024px)');
+  if (deviceWidth.matches) {
+    window.addEventListener('resize', setHeight);
+    setHeight();
+  }
 
-  React.useEffect(() => {
-    document.getElementById(
-      'ToggleMenu'
-    ).style.minHeight = `${window.innerHeight}px`;
-  }, []);
+  // React.useEffect(() => {
+  //   document.getElementById(
+  //     'ToggleMenu'
+  //   ).style.minHeight = `${window.innerHeight}px`;
+  // }, []);
 
   const handleButtonClick = (e) => {
     e.preventDefault();
