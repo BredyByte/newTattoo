@@ -1,13 +1,5 @@
 import React from 'react';
-import styles from './styles.module.scss';
-import { ReactComponent as TextLogo } from '../../assets/icons/LogoText.svg';
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useViewportScroll,
-} from 'framer-motion';
-import grayBg from '../../assets/img/Studio7.webp';
+import styles from './SlimFooter.module.scss';
 import { AiOutlineInstagram } from 'react-icons/ai';
 
 const iconsContent = [
@@ -17,11 +9,12 @@ const iconsContent = [
   },
 ];
 
-export const NewFooter = () => {
+export const SlimFooter = () => {
   return (
     <div className={styles.root}>
       <p className={styles.rights}>
-        All images are Copyright 2022. Black Rituals Tattoo All rights reserved.
+        All images are Copyright 2022. Black Rituals Tattoo. All rights
+        reserved.
       </p>
       <ul className={styles.iconsContainer}>
         {iconsContent.map((i, index) => (

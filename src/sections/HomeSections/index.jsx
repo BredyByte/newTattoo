@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './HomeSections.module.scss';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { TitleHomeSections } from '../../components';
+import { Title } from '../../components';
 import { presentationPageData } from '../../assets';
 import { SquareBtn } from '../../components';
 
@@ -38,7 +38,7 @@ const Section = ({ img, title, index, btnText, isMobile }) => {
         className={styles.content}
         style={index % 2 === 0 ? { right: '0' } : { left: '0' }}
       >
-        <TitleHomeSections text={title} />
+        <Title text={title} />
         <SquareBtn text={btnText} />
       </div>
     </section>

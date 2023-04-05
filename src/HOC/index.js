@@ -1,0 +1,1 @@
+export { WithFooterBgWrapper } from './WithFooterBgWrapper';

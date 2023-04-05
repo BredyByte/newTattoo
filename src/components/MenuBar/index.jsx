@@ -5,7 +5,14 @@ import PropTypes from 'prop-types';
 import { enableScroll, disableScroll } from '../../utils';
 import { Link } from 'react-router-dom';
 
-const arr = ['Home', 'About', 'Service', 'Works', 'Shop', 'Contacts'];
+const arr = [
+  { link: '/', title: 'Home' },
+  { link: 'about', title: 'About' },
+  { link: 'services', title: 'Services' },
+  { link: 'works', title: 'Works' },
+  { link: 'shop', title: 'Shop' },
+  { link: 'contacts', title: 'Contacts' },
+];
 
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -25,10 +32,10 @@ export const MenuBar = ({ isScrolled }) => {
     <nav className={`${styles.root} ${isScrolled ? styles.active : ''}`}>
       <LogoText className={styles.logo} />
       <menu className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}>
-        {arr.map((i) => (
-          <li className={styles.menuItem} key={i}>
-            {i}
-          </li>
+        {arr.map((i, index) => (
+          <Link to={i.link} className={styles.menuItem} key={index}>
+            {i.title}
+          </Link>
         ))}
       </menu>
       <button

@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './TitleHomeSections.module.scss';
+import styles from './Title.module.scss';
 import PropTypes from 'prop-types';
 
-export const TitleHomeSections = ({ text, additionalStyles, index }) => {
+export const Title = ({ text, additionalStyles, index }) => {
   const ref = React.useRef();
   return (
     <h2 className={`${styles.title} secondaryFont`} style={additionalStyles}>
@@ -11,7 +11,7 @@ export const TitleHomeSections = ({ text, additionalStyles, index }) => {
   );
 };
 
-TitleHomeSections.propTypes = {
+Title.propTypes = {
   text: PropTypes.string.isRequired,
   additionalStyles: PropTypes.object,
   index: PropTypes.number,

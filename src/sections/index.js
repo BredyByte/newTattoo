@@ -3,5 +3,5 @@ export { Contacts } from './Contacts';
 export { CombinedContFoot } from './CombinedContFoot';
 export { Services } from './Services';
 export { HomeSections } from './HomeSections';
-export { NewFooter } from './NewFooter';
+export { SlimFooter } from './SlimFooter';
 export { TiltPageContainer } from './TiltPageContainer';

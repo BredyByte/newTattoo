@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contacts.module.scss';
-import { MapCurtain, Map, TitleHomeSections } from '../../components';
+import { MapCurtain, Map, Title } from '../../components';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
@@ -32,7 +32,7 @@ export const Contacts = () => {
   return (
     <div className={styles.root}>
       <div className={styles.contentContainer}>
-        <TitleHomeSections text="Contacts" />
+        <Title text="Contacts" />
         <ul className={styles.list}>
           {linkListData.map((i) => (
             <li key={i.link} className={styles.listItem}>
