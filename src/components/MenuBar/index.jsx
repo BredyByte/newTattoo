@@ -16,15 +16,19 @@ const arr = [
 
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const setHeight = () => {
-    document.getElementById('ToggleMenu').style.minHeight =
-      window.innerHeight + 'px';
-  };
   let deviceWidth = window.matchMedia('(max-width: 1024px)');
-  if (deviceWidth.matches) {
-    window.addEventListener('resize', setHeight);
+  const setHeight = () => {
+    document.getElementById(
+      'ToggleMenu'
+    ).style.minHeight = `${window.screen.height}px`;
+  };
+  // if (deviceWidth.matches) {
+  //   window.addEventListener('resize', setHeight);
+  //   setHeight();
+  // }
+  React.useEffect(() => {
     setHeight();
-  }
+  }, []);
 
   // React.useEffect(() => {
   //   document.getElementById(
