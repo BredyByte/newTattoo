@@ -30,9 +30,8 @@ const linkListData = [
 
 export const Contacts = () => {
   return (
-    <div className={styles.root}>
+    <section className={styles.root}>
       <div className={styles.contentContainer}>
-        <Title text="Contacts" />
         <ul className={styles.list}>
           {linkListData.map((i) => (
             <li key={i.link} className={styles.listItem}>
@@ -48,6 +47,6 @@ export const Contacts = () => {
         <Map />
         <MapCurtain />
       </div>
-    </div>
+    </section>
   );
 };

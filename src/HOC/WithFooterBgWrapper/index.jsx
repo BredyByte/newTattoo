@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { HomeSections, SlimFooter } from '../../sections';
-import { MenuBar } from '../../components';
+import { MenuBar, Title } from '../../components';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import grayBg from '../../assets/img/grayBg.webp';
 import styles from './WithFooterBgWrapper.module.scss';
 
-export const WithFooterBgWrapper = ({ Component }) => {
+export const WithFooterBgWrapper = ({ Component, titleText }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -27,6 +27,7 @@ export const WithFooterBgWrapper = ({ Component }) => {
         }}
         className={styles.backgroundElem}
       />
+      {titleText && <Title text={titleText} forRouterPage={true} />}
       <MenuBar isScrolled={true} />
       <Component />
       <SlimFooter />
@@ -36,4 +37,5 @@ export const WithFooterBgWrapper = ({ Component }) => {
 
 WithFooterBgWrapper.propTypes = {
   Component: PropTypes.func.isRequired,
+  titleText: PropTypes.string,
 };

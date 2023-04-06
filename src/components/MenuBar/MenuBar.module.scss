@@ -24,7 +24,7 @@
   .logo {
     width: 400px;
     height: 85px;
-    //filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.8));
   }
   .menu {
     display: flex;
@@ -33,7 +33,7 @@
     gap: 0 25px;
     text-transform: uppercase;
     font-weight: 700;
-    li {
+    a {
       text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
       transition: all .5s;
       &:hover {

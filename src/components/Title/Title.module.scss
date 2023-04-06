@@ -1,14 +1,15 @@
-.container {
-  overflow: hidden;
-  padding: 20px 0 0 20px;
-}
 .title {
   position: relative;
   font-size: 96px;
   font-weight: 400;
   line-height: 1;
   color: white;
-  text-shadow: -18px -18px 2px #777;
+  text-shadow: -18px -18px 2px #777, 3px 3px 4px #000;
+  text-align: center;
+  z-index: 2;
+  &.marginBottom {
+    margin-bottom: 80px!important;
+  }
 }
 @media(max-width: 768px) {
   .title {

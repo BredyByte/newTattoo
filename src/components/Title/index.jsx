@@ -2,10 +2,14 @@ import React from 'react';
 import styles from './Title.module.scss';
 import PropTypes from 'prop-types';
 
-export const Title = ({ text, additionalStyles, index }) => {
-  const ref = React.useRef();
+export const Title = ({ text, additionalStyles, forRouterPage = false }) => {
   return (
-    <h2 className={`${styles.title} secondaryFont`} style={additionalStyles}>
+    <h2
+      className={`${styles.title} ${
+        forRouterPage ? styles.marginBottom : ''
+      } secondaryFont`}
+      style={additionalStyles}
+    >
       {text}
     </h2>
   );
@@ -14,5 +18,5 @@ export const Title = ({ text, additionalStyles, index }) => {
 Title.propTypes = {
   text: PropTypes.string.isRequired,
   additionalStyles: PropTypes.object,
-  index: PropTypes.number,
+  forRouterPage: PropTypes.bool,
 };
