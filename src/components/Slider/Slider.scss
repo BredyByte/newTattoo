@@ -1,20 +1,50 @@
-.carousel {
-  .swiper-slide {
-    width: 220px;
-    height: 360px;
+.slider {
+  width: 100%;
+  padding-top: 30px;
+}
+.slideItem {
+  outline: none;
+  display: flex!important;
+  justify-content: center;
+  padding: 12px 0;
+}
+.img {
+  width: 215px;
+  height: 215px;
+  border-radius: 30px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+  object-fit: cover;
+}
+.slickDots {
+  padding-top: 30px;
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+}
+.slickDots .slick-active .dotItem{
+  background-color: #FFA52D;
+}
+.dotItem {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255,180,183,0.6);
+}
 
-    .sliderImg {
-      width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
+@media (max-width: 560px) {
+  .img {
+    width: 185px;
+    height: 185px;
   }
-  .swiper-button-prev {
-    left: 30px;
-    color: red;
-  }
-  .swiper-button-next {
-    right: 30px;
-    color: blue;
+  .slickDots {
+    padding-top: 20px;
   }
 }
+@media(max-width: 430px) {
+  .img {
+    width: 140px;
+    height: 140px;
+  }
+}
+

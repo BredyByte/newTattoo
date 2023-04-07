@@ -13,7 +13,7 @@ export const Slider = ({ data }) => {
     dots: true,
     infinite: false,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,

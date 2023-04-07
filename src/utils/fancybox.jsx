@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
-import { Fancybox as NativeFancybox } from '@fancyapps/ui/dist/fancybox.esm.js';
-import '@fancyapps/ui/dist/fancybox.css';
+import { Fancybox as NativeFancybox } from '@fancyapps/ui/dist/fancybox/fancybox.esm';
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
 import PropTypes from 'prop-types';
 
 export const Fancybox = (props) => {
