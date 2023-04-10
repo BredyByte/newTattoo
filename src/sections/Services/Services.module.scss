@@ -24,8 +24,31 @@
     }
   }
   .sliderContainer {
-    min-width: 400px;
+    width: 400px;
     height: 400px;
-    background-color: red;
+  }
+}
+
+@media (max-width: 1140px) {
+  .root {
+    padding: 0 40px;
+    gap: 0 20px;
+  }
+}
+@media (max-width: 767px)
+{
+  .root {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 576px)
+{
+  .root {
+    .infoContainer {
+      .title, .price {
+        font-size: 76px;
+      }
+    }
   }
 }

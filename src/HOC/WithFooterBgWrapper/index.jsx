@@ -12,7 +12,7 @@ export const WithFooterBgWrapper = ({ Component, titleText }) => {
     target: ref,
     offset: ['start', 'end start'],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ['0', '60%']);
+  const y = useTransform(scrollYProgress, [0, 1], ['0', '20%']);
   React.useEffect(() => {
     window.scrollTo({
       top: 0,

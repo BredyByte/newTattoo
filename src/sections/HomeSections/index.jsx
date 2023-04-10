@@ -3,10 +3,11 @@ import styles from './HomeSections.module.scss';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { Title } from '../../components';
-import { presentationPageData } from '../../assets';
+import { presentationPageData } from '../../assets/data';
 import { SquareBtn } from '../../components';
+import { Link } from 'react-router-dom';
 
-const Section = ({ img, title, index, btnText, isMobile }) => {
+const Section = ({ img, title, index, btnText, isMobile, link }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -31,7 +32,9 @@ const Section = ({ img, title, index, btnText, isMobile }) => {
         style={index % 2 === 0 ? { right: '0' } : { left: '0' }}
       >
         <Title text={title} />
-        <SquareBtn text={btnText} />
+        <Link to={link}>
+          <SquareBtn text={btnText} />
+        </Link>
       </div>
     </section>
   );
@@ -54,6 +57,7 @@ export const HomeSections = ({ isMobile }) => {
           index={index}
           btnText={obj.btnText}
           isMobile={isMobile}
+          link={obj.link}
         />
       ))}
     </>
@@ -66,6 +70,7 @@ Section.propTypes = {
   index: PropTypes.number.isRequired,
   btnText: PropTypes.string.isRequired,
   isMobile: PropTypes.bool.isRequired,
+  link: PropTypes.string.isRequired,
 };
 HomeSections.propTypes = {
   isMobile: PropTypes.bool.isRequired,

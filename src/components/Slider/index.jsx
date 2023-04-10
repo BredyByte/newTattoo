@@ -7,28 +7,20 @@ import sliderImg1 from '../../assets/img/Studio3.webp';
 import { Fancybox } from '../../utils/fancybox';
 import PropTypes from 'prop-types';
 
-export const Slider = ({ data }) => {
+export const Slider = ({ data, fancyData }) => {
   const [defaultImage, setDefaultImage] = useState(sliderImg1);
   const settings = {
     dots: true,
     infinite: false,
-    speed: 300,
+    speed: 900,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 0,
     arrows: false,
-    dotsClass: 'slickDots',
+    autoplay: true,
+    autoplaySpeed: 5000,
+    draggable: false,
+    swipe: false,
     defaultImage: defaultImage,
-    customPaging: (i) => <button className="dotItem"></button>,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
   const handleErrorImage = (data) => {
@@ -45,16 +37,16 @@ export const Slider = ({ data }) => {
         <SlickSlider {...settings}>
           {data.map((i) => (
             <a
-              key={i.id}
+              key={fancyData}
               className="slideItem"
-              href={i.imgLink}
-              data-fancybox={i.fancy}
+              href={i}
+              data-fancybox={fancyData}
             >
               <img
                 className="img"
-                src={i.imgLink}
+                src={i}
                 onError={handleErrorImage}
-                alt="Slider Img"
+                alt={fancyData}
               />
             </a>
           ))}
@@ -65,5 +57,6 @@ export const Slider = ({ data }) => {
 };
 
 Slider.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.array.isRequired,
+  fancyData: PropTypes.string.isRequired,
 };
