@@ -11,5 +11,32 @@ import {
 
 import './styles/index.scss';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            index: true,
+            element: <HomePage />,
+          },
+          {
+            path: '/contacts',
+            element: <ContactsPage />,
+          },
+          {
+            path: '/services',
+            element: <ServicesPage />,
+          },
+        ],
+      },
+    ],
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={router} />);
