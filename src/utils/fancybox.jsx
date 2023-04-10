@@ -21,7 +21,7 @@ export const Fancybox = (props) => {
 };
 
 Fancybox.propTypes = {
-  delegate: PropTypes.bool,
+  delegate: PropTypes.string,
   options: PropTypes.object,
-  children: PropTypes.func,
+  children: PropTypes.node.isRequired,
 };

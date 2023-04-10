@@ -1,6 +1,6 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
-import img from '../../assets/img/firstPageBg1.png';
+import img from '../../assets/img/firstPageBg.png';
 import { ReactComponent as Logo } from '../../assets/icons/LogoTilt.svg';
 import styles from './TiltPage.module.scss';
 import { ArrowBtn } from '../';

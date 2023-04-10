@@ -1,14 +1,9 @@
 import React from 'react';
 import { HomeSections, TiltPageContainer } from '../../sections/';
-import {
-  MenuBar,
-  NavArrows,
-  CustomCursor,
-  FixedFooter,
-} from '../../components';
+import { MenuBar, NavArrows, CustomCursor } from '../../components';
 import { useIsMobile } from '../../utils';
 
-export const Home = () => {
+export const HomePage = () => {
   const isMobile = useIsMobile();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isEndOfPage, setIsEndOfPage] = React.useState(false);

@@ -1,5 +1,5 @@
-export { Home } from './Home';
-export { ContactUs } from './ContactUs';
+export { HomePage } from './HomePage';
+export { ContactsPage } from './ContactsPage';
 export { Root } from './Root';
 export { ErrorPage } from './ErrorPage';
-export { OurServices } from './OurServices';
+export { ServicesPage } from './ServicesPage';

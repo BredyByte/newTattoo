@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { HomeSections, SlimFooter } from '../../sections';
-import { MenuBar, Title } from '../../components';
+import { MenuBar, Title, Footer } from '../../components';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import grayBg from '../../assets/img/grayBg.webp';
 import styles from './WithFooterBgWrapper.module.scss';
@@ -12,7 +11,7 @@ export const WithFooterBgWrapper = ({ Component, titleText }) => {
     target: ref,
     offset: ['start', 'end start'],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ['0', '20%']);
+  const y = useTransform(scrollYProgress, [0, 1], ['0', '30%']);
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -30,7 +29,7 @@ export const WithFooterBgWrapper = ({ Component, titleText }) => {
       {titleText && <Title text={titleText} forRouterPage={true} />}
       <MenuBar isScrolled={true} />
       <Component />
-      <SlimFooter />
+      <Footer />
     </div>
   );
 };

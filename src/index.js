@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Root, Home, ContactUs, ErrorPage } from './routes';
+import {
+  Root,
+  HomePage,
+  ContactsPage,
+  ErrorPage,
+  ServicesPage,
+} from './routes';
 
 import './styles/index.scss';
-import { OurServices } from './routes';
 
 const router = createBrowserRouter([
   {
@@ -17,22 +22,23 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            // path: '/home',
-            element: <Home />,
+            element: <HomePage />,
           },
           {
             path: '/contacts',
-            element: <ContactUs />,
+            element: <ContactsPage />,
           },
           {
             path: '/services',
-            element: <OurServices />,
+            element: <ServicesPage />,
           },
         ],
       },
     ],
   },
 ]);
+
+const App = () => {};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={router} />);

@@ -21,14 +21,7 @@ export const servicesData = [
       'eiusmod temporud exercitation ullamco laboris nisi ut aliquip ' +
       'ex ea commodo consequat.',
     price: 900,
-    imgData: [
-      require('./img/swiperImg1.jpeg'),
-      require('./img/swiperImg2.jpg'),
-      require('./img/swiperImg3.jpeg'),
-      require('./img/swiperImg4.jpg'),
-      require('./img/swiperImg5.jpg'),
-      require('./img/swiperImg6.jpg'),
-    ],
+    imgData: [require('./img/swiperImg6.jpg')],
   },
   {
     name: 'Realism',
@@ -42,26 +35,15 @@ export const servicesData = [
       'ex ea commodo consequat. Ex ea commodo consequat.',
     price: 15,
     imgData: [
-      require('./img/swiperImg1.jpeg'),
       require('./img/swiperImg2.jpg'),
       require('./img/swiperImg3.jpeg'),
-      require('./img/swiperImg4.jpg'),
-      require('./img/swiperImg5.jpg'),
-      require('./img/swiperImg6.jpg'),
     ],
   },
   {
     name: 'Piercing',
     desc: 'Lorem ipsum dolor sit amet',
     price: 120,
-    imgData: [
-      require('./img/swiperImg1.jpeg'),
-      require('./img/swiperImg2.jpg'),
-      require('./img/swiperImg3.jpeg'),
-      require('./img/swiperImg4.jpg'),
-      require('./img/swiperImg5.jpg'),
-      require('./img/swiperImg6.jpg'),
-    ],
+    imgData: [],
   },
 ];
 
@@ -73,7 +55,7 @@ export const presentationPageData = [
     link: '/about',
   },
   {
-    title: 'Our Services',
+    title: 'Our ServicesList',
     img: require('./img/Studio2.webp'),
     btnText: 'Services',
     link: '/services',

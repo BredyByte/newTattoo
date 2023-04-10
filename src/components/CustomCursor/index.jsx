@@ -12,7 +12,6 @@ export const CustomCursor = () => {
       x: mousePosition.x - 32,
       y: mousePosition.y - 32,
       mixBlendMode: 'difference',
-      backgroundColor: 'white',
     },
   };
 

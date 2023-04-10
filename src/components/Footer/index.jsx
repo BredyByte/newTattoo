@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './SlimFooter.module.scss';
+import styles from './Footer.module.scss';
 import { AiOutlineInstagram } from 'react-icons/ai';
 
 const iconsContent = [
@@ -9,7 +9,7 @@ const iconsContent = [
   },
 ];
 
-export const SlimFooter = () => {
+export const Footer = () => {
   return (
     <div className={styles.root}>
       <p className={styles.rights}>

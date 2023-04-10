@@ -9,7 +9,6 @@ export const TiltPageContainer = ({ isMobile }) => {
       style={{
         minHeight: '100vh',
         overflow: 'hidden',
-        background: 'black',
         position: 'relative',
         scrollSnapAlign: 'center',
       }}

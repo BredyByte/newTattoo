@@ -12,17 +12,7 @@
   transform-style: preserve-3d;
   transform: translateZ(100px);
   background-position: center center;
-  //
-  //&::before {
-  //  content: '';
-  //  position: absolute;
-  //  top: 0;
-  //  right: 0;
-  //  width: 101%;
-  //  height: 101%;
-  //  background: rgba(0,0,0,0.3);
-  //  backdrop-filter: blur(3px);
-  //}
+
   .innerElement {
     position: relative;
     width: 100%;

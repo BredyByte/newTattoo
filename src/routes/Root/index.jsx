@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './Root.module.scss';
 import {
   Outlet,
   // useLoaderData,
@@ -10,10 +9,12 @@ import {
   // useNavigation,
   // useSubmit,
 } from 'react-router-dom';
+import { LoadingOverlay } from '../../sections';
 
 export const Root = () => {
   return (
     <div id="RouterRoot">
+      <LoadingOverlay />
       <Outlet />
     </div>
   );
