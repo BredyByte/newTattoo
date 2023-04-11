@@ -27,6 +27,7 @@
     "max-len": ["warn", {
       "code": 120
     }],
-    "semi": ["warn", "always"]
+    "semi": ["warn", "always"],
+    "react/display-name": "warn"
   }
 }

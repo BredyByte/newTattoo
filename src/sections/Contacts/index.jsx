@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contacts.module.scss';
-import { MapCurtain, Map, Title } from '../../components';
+import { MapCurtain, Map } from '../../components';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';

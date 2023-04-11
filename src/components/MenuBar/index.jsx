@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
 import PropTypes from 'prop-types';
-import { enableScroll, disableScroll } from '../../utils';
 import { Link } from 'react-router-dom';
 
 const arr = [
@@ -16,7 +15,7 @@ const arr = [
 
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  let deviceWidth = window.matchMedia('(max-width: 1024px)');
+  const deviceWidth = window.matchMedia('(max-width: 1024px)');
   const setHeight = () => {
     document.getElementById(
       'ToggleMenu'

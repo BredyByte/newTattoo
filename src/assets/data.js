@@ -55,7 +55,7 @@ export const presentationPageData = [
     link: '/about',
   },
   {
-    title: 'Our ServicesList',
+    title: 'Our Services',
     img: require('./img/Studio2.webp'),
     btnText: 'Services',
     link: '/services',

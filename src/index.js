@@ -2,35 +2,41 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {
-  Root,
-  HomePage,
-  ContactsPage,
-  ErrorPage,
-  ServicesPage,
+  RootLayout,
+  HomeLayout,
+  ErrorLayout,
+  ContactsLayout,
+  ServicesLayout,
 } from './routes';
 
+import { withLoading } from './HOC/withLoading';
+
 import './styles/index.scss';
+
+const HomePageWithLoading = withLoading(HomeLayout);
+const ContactsPageWithLoading = withLoading(ContactsLayout);
+const ServicesPageWithLoading = withLoading(ServicesLayout);
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />,
-    errorElement: <ErrorPage />,
+    element: <RootLayout />,
+    errorElement: <ErrorLayout />,
     children: [
       {
-        errorElement: <ErrorPage />,
+        errorElement: <ErrorLayout />,
         children: [
           {
             index: true,
-            element: <HomePage />,
+            element: <HomePageWithLoading />,
           },
           {
             path: '/contacts',
-            element: <ContactsPage />,
+            element: <ContactsPageWithLoading />,
           },
           {
             path: '/services',
-            element: <ServicesPage />,
+            element: <ServicesPageWithLoading />,
           },
         ],
       },

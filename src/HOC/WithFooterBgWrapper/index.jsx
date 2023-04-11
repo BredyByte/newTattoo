@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MenuBar, Title, Footer } from '../../components';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import grayBg from '../../assets/img/grayBg.webp';
+import grayBg from '../../assets/img/grayBgMin.webp';
 import styles from './WithFooterBgWrapper.module.scss';
 
 export const WithFooterBgWrapper = ({ Component, titleText }) => {
