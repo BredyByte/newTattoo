@@ -8,14 +8,21 @@ export const withLoading = (Component) => {
     const [isDeletedLoader, setIsDeletedLoader] = React.useState(true);
 
     React.useEffect(() => {
-      window.addEventListener('load', function () {
-        setTimeout(() => {
-          setLoading(false);
-          setTimeout(() => {
-            setIsDeletedLoader(false);
-          }, 1000);
-        }, 2000);
-      });
+      window.addEventListener(
+        'load',
+        function () {
+          alert('second alert');
+        },
+        false
+      );
+      // window.addEventListener('load', function () {
+      //   setTimeout(() => {
+      //     setLoading(false);
+      //     setTimeout(() => {
+      //       setIsDeletedLoader(false);
+      //     }, 1000);
+      //   }, 2000);
+      // });
     }, []);
 
     return (
