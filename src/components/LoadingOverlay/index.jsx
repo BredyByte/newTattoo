@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Typed from 'react-typed';
+// import Typed from 'react-typed';
 import styles from './LoadingOverlay.module.scss';
 
 export const LoadingOverlay = ({ loading }) => {
@@ -11,7 +11,8 @@ export const LoadingOverlay = ({ loading }) => {
         loading ? '' : styles.isFinished
       } secondaryFont`}
     >
-      <Typed strings={strings} typeSpeed={100} backSpeed={40} loop={true} />
+      {/*<Typed strings={strings} typeSpeed={100} backSpeed={40} loop={true} />*/}
+      <span>Loading...</span>
     </div>
   );
 };
