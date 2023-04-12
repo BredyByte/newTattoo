@@ -21,6 +21,7 @@ export const HomeLayout = () => {
     scrollTop > 50 ? setIsScrolled(true) : setIsScrolled(false);
   };
   React.useEffect(() => {
+    document.querySelector('html').style.scrollBehavior = 'smooth';
     window.scrollTo({
       top: 0,
     });
@@ -33,6 +34,7 @@ export const HomeLayout = () => {
         handleScroll();
         CheckScrolledToEnd();
       });
+      document.querySelector('html').style.scrollBehavior = null;
     };
   }, []);
 

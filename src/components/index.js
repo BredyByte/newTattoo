@@ -10,3 +10,4 @@ export { NavArrows } from './NavArrows';
 export { CustomCursor } from './CustomCursor';
 export { Footer } from './Footer';
 export { LoadingOverlay } from './LoadingOverlay';
+export { TypingComponent } from './TypingComponent';
