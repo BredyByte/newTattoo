@@ -90,10 +90,12 @@
         &::before {
           left: -100px;
           width: 130px;
-          height: 1.5px;
+          height: 2.5px;
+          top: 47%;
         }
         &::after {
           right: 55px;
+          top: 47%;
         }
       }
       .circleContainer {
@@ -116,6 +118,7 @@
         &::before {
           left: -50px;
           width: 85px;
+          height: 1.5px;
         }
         &::after {
           right: 40px;
