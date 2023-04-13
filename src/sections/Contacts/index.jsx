@@ -9,7 +9,7 @@ const linkListData = [
   {
     link: 'https://www.instagram.com/tattoo_blackrituals/',
     icon: AiFillInstagram,
-    text: 'Instagram',
+    text: 'tattoo_blackrituals',
   },
   {
     link: 'tel:+34662483313',
@@ -24,7 +24,7 @@ const linkListData = [
   {
     link: 'https://goo.gl/maps/3n9n7otCfzxxeRdq6',
     icon: FaMapMarkerAlt,
-    text: 'Localización',
+    text: 'C. Martínez Maldonado, 19, local 1, 29007 Málaga',
   },
 ];
 

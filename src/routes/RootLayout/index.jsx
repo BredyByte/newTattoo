@@ -9,6 +9,7 @@ import {
   // useNavigation,
   // useSubmit,
 } from 'react-router-dom';
+import { CustomCursor } from '../../components';
 
 export const RootLayout = () => {
   return (

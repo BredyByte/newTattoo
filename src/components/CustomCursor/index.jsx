@@ -9,8 +9,8 @@ export const CustomCursor = () => {
   });
   const variants = {
     default: {
-      x: mousePosition.x - 32,
-      y: mousePosition.y - 32,
+      x: mousePosition.x - 22,
+      y: mousePosition.y - 22,
       mixBlendMode: 'difference',
     },
   };
@@ -32,9 +32,10 @@ export const CustomCursor = () => {
   return (
     <>
       <motion.div
-        className={styles.root}
+        className={`${styles.root} cursor`}
         variants={variants}
         animate={'default'}
+        transition={{ duration: 0, type: 'just' }}
       />
     </>
   );

@@ -73,7 +73,7 @@ export const presentationPageData = [
     link: '/shop',
   },
   {
-    title: 'Contact us',
+    title: 'Locations & Contact',
     img: require('./img/testBgSection2.jpeg'),
     btnText: 'Contacts',
     link: '/contacts',

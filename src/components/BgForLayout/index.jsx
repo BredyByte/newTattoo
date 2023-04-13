@@ -34,5 +34,5 @@ export const BgForLayout = ({ children }) => {
 };
 
 BgForLayout.propTypes = {
-  children: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
 };

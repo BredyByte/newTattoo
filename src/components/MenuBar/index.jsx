@@ -33,25 +33,21 @@ export const MenuBar = ({ isScrolled }) => {
     };
   }, []);
 
-  // React.useEffect(() => {
-  //   document.getElementById(
-  //     'ToggleMenu'
-  //   ).style.minHeight = `${window.innerHeight}px`;
-  // }, []);
-
   const handleButtonClick = (e) => {
     e.preventDefault();
     setIsOpen((prev) => !prev);
   };
   return (
     <nav className={`${styles.root} ${isScrolled ? styles.active : ''}`}>
-      <LogoText className={styles.logo} />
+      <Link to="/">
+        <LogoText className={styles.logo} />
+      </Link>
       <menu
         id="ToggleMenu"
         className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}
       >
         {arr.map((i, index) => (
-          <Link to={i.link} className={styles.menuItem} key={index}>
+          <Link to={i.link} key={index}>
             {i.title}
           </Link>
         ))}

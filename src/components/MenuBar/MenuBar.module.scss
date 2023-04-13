@@ -94,7 +94,6 @@
       height: #{$width + 10px};
       @include flex-center();
       flex-direction: column;
-      cursor: pointer;
       z-index: 12;
       &.close {
         .line {
