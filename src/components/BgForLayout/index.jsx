@@ -1,11 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { MenuBar, Title, Footer } from '../../components';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import grayBg from '../../assets/img/grayBgMin.webp';
-import styles from './WithFooterBgWrapper.module.scss';
+import styles from './BgForLayout.module.scss';
+import PropTypes from 'prop-types';
+import { Title } from '../Title';
+import { MenuBar } from '../MenuBar';
+import { Footer } from '../Footer';
 
-export const WithFooterBgWrapper = ({ Component, titleText }) => {
+export const BgForLayout = ({ children }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,15 +28,11 @@ export const WithFooterBgWrapper = ({ Component, titleText }) => {
         }}
         className={styles.backgroundElem}
       />
-      {titleText && <Title text={titleText} forRouterPage={true} />}
-      <MenuBar isScrolled={true} />
-      <Component />
-      <Footer />
+      {children}
     </div>
   );
 };
 
-WithFooterBgWrapper.propTypes = {
-  Component: PropTypes.func.isRequired,
-  titleText: PropTypes.string,
+BgForLayout.propTypes = {
+  children: PropTypes.func.isRequired,
 };

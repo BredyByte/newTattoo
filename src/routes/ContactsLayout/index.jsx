@@ -1,11 +1,5 @@
 import React from 'react';
 import { Contacts } from '../../sections';
-import { WithFooterBgWrapper } from '../../HOC';
+import { withBgTitleFooterMenu } from '../../HOC/withBgTitleFooterMenu';
 
-export const ContactsLayout = () => {
-  return (
-    <>
-      <WithFooterBgWrapper Component={Contacts} titleText="Contacts" />
-    </>
-  );
-};
+export const ContactsLayout = withBgTitleFooterMenu(Contacts, 'Contacts');

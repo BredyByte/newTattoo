@@ -91,7 +91,7 @@
         &::before {
           left: -100px;
           width: 130px;
-          height: 2px;
+          height: 1.5px;
         }
         &::after {
           right: 55px;
@@ -115,8 +115,8 @@
       height: 80px;
       .arrow {
         &::before {
-          left: -35px;
-          width: 70px;
+          left: -50px;
+          width: 85px;
         }
         &::after {
           right: 40px;

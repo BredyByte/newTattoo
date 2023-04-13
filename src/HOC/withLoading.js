@@ -3,7 +3,7 @@ import NProgress from 'nprogress';
 import { LoadingOverlay } from '../components';
 
 export const withLoading = (Component) => {
-  return function WithLoadingComponent(props) {
+  return function PropComponent(props) {
     const [loading, setLoading] = React.useState(true);
     const [isDeletedLoader, setIsDeletedLoader] = React.useState(true);
 

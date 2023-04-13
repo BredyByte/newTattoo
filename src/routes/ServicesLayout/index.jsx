@@ -1,11 +1,8 @@
 import React from 'react';
-import { WithFooterBgWrapper } from '../../HOC';
+import { withBgTitleFooterMenu } from '../../HOC/withBgTitleFooterMenu';
 import { ServicesList } from '../../sections';
 
-export const ServicesLayout = () => {
-  return (
-    <>
-      <WithFooterBgWrapper titleText="Our Services" Component={ServicesList} />
-    </>
-  );
-};
+export const ServicesLayout = withBgTitleFooterMenu(
+  ServicesList,
+  'Our Services'
+);
