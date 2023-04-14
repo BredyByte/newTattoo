@@ -15,23 +15,22 @@ const arr = [
 
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const deviceWidth = window.matchMedia('(max-width: 1024px)');
-  const setHeight = () => {
-    document.getElementById(
-      'ToggleMenu'
-    ).style.minHeight = `${window.screen.height}px`;
-  };
-  React.useEffect(() => {
-    if (deviceWidth.matches) {
-      window.addEventListener('resize', setHeight);
-      setHeight();
-    }
-    return () => {
-      if (deviceWidth.matches) {
-        window.removeEventListener('resize', setHeight);
-      }
-    };
-  }, []);
+  // const deviceWidth = window.matchMedia('(max-width: 1024px)');
+  // const setHeight = () => {
+  //   document.getElementById(
+  //     'ToggleMenu'
+  //   ).style.minHeight = `${window.screen.height}px`;
+  // };
+  // React.useEffect(() => {
+  //   if (deviceWidth.matches) {
+  //     window.addEventListener('resize', setHeight);
+  //   }
+  //   return () => {
+  //     if (deviceWidth.matches) {
+  //       window.removeEventListener('resize', setHeight);
+  //     }
+  //   };
+  // }, []);
 
   const handleButtonClick = (e) => {
     e.preventDefault();

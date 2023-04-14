@@ -72,6 +72,7 @@
       visibility: hidden;
       transition: all .5s ease-in-out;
       background: #000;
+      min-height: 105vh;
       li {
         font-size: 26px;
         &:hover {
