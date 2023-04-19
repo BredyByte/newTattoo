@@ -1,0 +1,109 @@
+.root {
+  padding: 25px;
+  width: 33.33%;
+  height: 600px;
+  .wrapper {
+    height: 100%;
+    .imgLink {
+      display: block;
+      position: relative;
+      height: 80%;
+      transition: all .5s;
+      overflow: hidden;
+      img {
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        transition: all .5s;
+      }
+      .imgAddText {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 16px;
+        color: black;
+        padding: 5px 10px;
+        background: #fff;
+        font-weight: 300;
+        transition: all .5s;
+      }
+      .plusIco {
+        opacity: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transition: all .5s;
+        transform: translate(-50%);
+        width: 45px;
+        height: 45px;
+      }
+      &:hover {
+        img {
+          filter: grayscale(0);
+          -webkit-filter: grayscale(0);
+        }
+        + .descBox .descTitle {
+          color: #D99938;
+        }
+        .plusIco {
+          opacity: 1;
+          transform: translate(-50%) rotate(90deg);
+        }
+      }
+    }
+    .descBox {
+      padding-top: 25px;
+      .descTitle {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 26px;
+        font-weight: 300;
+        transition: all .5s;
+      }
+      .numOfPhot {
+      }
+    }
+  }
+}
+
+@media(max-width: 920px) {
+  .root {
+    width: 80%;
+    padding: 0;
+    .wrapper {
+      height: 100%;
+      .imgLink {
+        img {
+          filter: grayscale(0);
+          -webkit-filter: grayscale(0);
+        }
+        .plusIco {
+          opacity: 1;
+          transform: translate(-50%) rotate(90deg);
+        }
+      }
+      .descBox {
+        .descTitle {
+          color: #D99938;
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .root {
+    height: 500px;
+  }
+}
+
+@media(max-width: 576px) {
+  .root {
+    width: 90%;
+    height: 450px;
+  }
+}

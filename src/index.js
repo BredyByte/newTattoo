@@ -7,6 +7,7 @@ import {
   ErrorLayout,
   ContactsLayout,
   ServicesLayout,
+  WorksLayout,
 } from './routes';
 
 import { withLoading } from './HOC/withLoading';
@@ -16,6 +17,7 @@ import './styles/index.scss';
 const HomePageWithLoading = withLoading(HomeLayout);
 const ContactsPageWithLoading = withLoading(ContactsLayout);
 const ServicesPageWithLoading = withLoading(ServicesLayout);
+const WorksPageWithLoading = withLoading(WorksLayout);
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
           },
           {
             path: '/services',
+            element: <ServicesPageWithLoading />,
+          },
+          {
+            path: '/works',
+            element: <WorksPageWithLoading />,
+          },
+          {
+            path: '/works/tattoo',
             element: <ServicesPageWithLoading />,
           },
         ],

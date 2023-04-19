@@ -3,9 +3,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import grayBg from '../../assets/img/grayBgMin.webp';
 import styles from './BgForLayout.module.scss';
 import PropTypes from 'prop-types';
-import { Title } from '../Title';
-import { MenuBar } from '../MenuBar';
-import { Footer } from '../Footer';
 
 export const BgForLayout = ({ children }) => {
   const ref = React.useRef(null);

@@ -1,4 +1,3 @@
-import React from 'react';
 import { withBgTitleFooterMenu } from '../../HOC/withBgTitleFooterMenu';
 import { ServicesList } from '../../sections';
 

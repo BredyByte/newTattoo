@@ -30,3 +30,11 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
+
+@media (max-width: 1140px) {
+  .root {
+    section {
+      padding: 0 20px;
+    }
+  }
+}

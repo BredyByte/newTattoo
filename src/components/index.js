@@ -11,4 +11,5 @@ export { CustomCursor } from './CustomCursor';
 export { Footer } from './Footer';
 export { LoadingOverlay } from './LoadingOverlay';
 export { TypingComponent } from './TypingComponent';
+export { WorksPageItem } from './WorksPageItem';
 export { BgForLayout } from './BgForLayout';

@@ -7,11 +7,11 @@ export const servicesData = [
     price: 40,
     imgData: [
       require('./img/swiperImg1.jpeg'),
-      require('./img/swiperImg2.jpg'),
+      require('./img/swiperImg4.jpg'),
+      require('./img/swiperImg1.jpeg'),
       require('./img/swiperImg3.jpeg'),
       require('./img/swiperImg4.jpg'),
-      require('./img/swiperImg5.jpg'),
-      require('./img/swiperImg6.jpg'),
+      require('./img/swiperImg1.jpeg'),
     ],
   },
   {
@@ -21,7 +21,7 @@ export const servicesData = [
       'eiusmod temporud exercitation ullamco laboris nisi ut aliquip ' +
       'ex ea commodo consequat.',
     price: 900,
-    imgData: [require('./img/swiperImg6.jpg')],
+    imgData: [require('./img/swiperImg3.jpeg')],
   },
   {
     name: 'Realism',
@@ -35,8 +35,8 @@ export const servicesData = [
       'ex ea commodo consequat. Ex ea commodo consequat.',
     price: 15,
     imgData: [
-      require('./img/swiperImg2.jpg'),
       require('./img/swiperImg3.jpeg'),
+      require('./img/swiperImg1.jpeg'),
     ],
   },
   {
@@ -61,9 +61,9 @@ export const presentationPageData = [
     link: '/services',
   },
   {
-    title: 'The Best Work',
+    title: 'The Best Works',
     img: require('./img/Studio7.webp'),
-    btnText: 'Watch Tattoos',
+    btnText: 'View Works',
     link: '/works',
   },
   {
@@ -77,5 +77,37 @@ export const presentationPageData = [
     img: require('./img/testBgSection2.jpeg'),
     btnText: 'Contacts',
     link: '/contacts',
+  },
+];
+
+export const worksData = [
+  {
+    title: 'Tattoo',
+    imgData: [
+      require('./img/swiperImg1.jpeg'),
+      require('./img/swiperImg4.jpg'),
+      require('./img/swiperImg1.jpeg'),
+      require('./img/swiperImg3.jpeg'),
+    ],
+  },
+  {
+    title: 'Laser removal',
+    imgData: [
+      require('./img/swiperImg3.jpeg'),
+      require('./img/swiperImg1.jpeg'),
+    ],
+  },
+  {
+    title: 'Piercing',
+    imgData: [
+      require('./img/swiperImg4.jpg'),
+      require('./img/swiperImg1.jpeg'),
+      require('./img/swiperImg1.jpeg'),
+      require('./img/swiperImg3.jpeg'),
+      require('./img/swiperImg4.jpg'),
+      require('./img/swiperImg1.jpeg'),
+      require('./img/swiperImg1.jpeg'),
+      require('./img/swiperImg1.jpeg'),
+    ],
   },
 ];

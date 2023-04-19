@@ -1,5 +1,4 @@
 import React from 'react';
-import NProgress from 'nprogress';
 import { LoadingOverlay } from '../components';
 
 export const withLoading = (Component) => {
@@ -13,8 +12,8 @@ export const withLoading = (Component) => {
           setLoading(false);
           setTimeout(() => {
             setIsDeletedLoader(false);
-          }, 1000);
-        }, 2000);
+          }, 500);
+        }, 1000);
       };
       if (document.readyState === 'complete') {
         onPageLoad();

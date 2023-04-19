@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const arr = [
   { link: '/', title: 'Home' },
@@ -46,9 +46,13 @@ export const MenuBar = ({ isScrolled }) => {
         className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}
       >
         {arr.map((i, index) => (
-          <Link to={i.link} key={index}>
+          <NavLink
+            to={i.link}
+            style={({ isActive }) => (isActive ? { color: '#D99938' } : {})}
+            key={index}
+          >
             {i.title}
-          </Link>
+          </NavLink>
         ))}
       </menu>
       <button
