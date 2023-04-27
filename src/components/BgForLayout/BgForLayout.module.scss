@@ -3,38 +3,42 @@
   position: relative;
   z-index: 2;
   padding-top: 200px;
-  min-height: 100vh;
   section {
     position: relative;
     z-index: 2;
+    min-height: 100vh;
     margin-bottom: 100px;
   }
-}
-.backgroundElem {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
-  &::before {
-    content: '';
+  .backgroundElem {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  &.container section {
+      max-width: 1340px;
+      margin: 0 auto 100px;
   }
 }
 
 @media (max-width: 1140px) {
   .root {
-    section {
-      padding: 0 20px;
+    &.container section {
+      padding: 0 40px;
     }
   }
 }

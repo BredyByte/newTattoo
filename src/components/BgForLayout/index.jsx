@@ -4,7 +4,7 @@ import grayBg from '../../assets/img/grayBgMin.webp';
 import styles from './BgForLayout.module.scss';
 import PropTypes from 'prop-types';
 
-export const BgForLayout = ({ children }) => {
+export const BgForLayout = ({ children, isContainer = true }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -17,7 +17,10 @@ export const BgForLayout = ({ children }) => {
     });
   }, []);
   return (
-    <div className={styles.root} ref={ref}>
+    <div
+      className={`${styles.root} ${isContainer ? styles.container : ''}`}
+      ref={ref}
+    >
       <motion.div
         style={{
           y,
@@ -32,4 +35,5 @@ export const BgForLayout = ({ children }) => {
 
 BgForLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  isContainer: PropTypes.bool,
 };

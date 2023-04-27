@@ -10,6 +10,7 @@
       height: 80%;
       transition: all .5s;
       overflow: hidden;
+      box-shadow: -5px -5px 15px rgba(0,0,0,0.6);
       img {
         filter: grayscale(1);
         -webkit-filter: grayscale(1);

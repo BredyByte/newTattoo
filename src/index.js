@@ -8,6 +8,7 @@ import {
   ContactsLayout,
   ServicesLayout,
   WorksLayout,
+  GalleryLayout,
 } from './routes';
 
 import { withLoading } from './HOC/withLoading';
@@ -18,6 +19,7 @@ const HomePageWithLoading = withLoading(HomeLayout);
 const ContactsPageWithLoading = withLoading(ContactsLayout);
 const ServicesPageWithLoading = withLoading(ServicesLayout);
 const WorksPageWithLoading = withLoading(WorksLayout);
+const GalleryPageWithLoading = withLoading(GalleryLayout);
 
 const router = createBrowserRouter([
   {
@@ -29,7 +31,8 @@ const router = createBrowserRouter([
         errorElement: <ErrorLayout />,
         children: [
           {
-            index: true,
+            // index: true,
+            path: '/home',
             element: <HomePageWithLoading />,
           },
           {
@@ -45,8 +48,9 @@ const router = createBrowserRouter([
             element: <WorksPageWithLoading />,
           },
           {
-            path: '/works/tattoo',
-            element: <ServicesPageWithLoading />,
+            // path: '/gallery',
+            index: true,
+            element: <GalleryPageWithLoading />,
           },
         ],
       },
