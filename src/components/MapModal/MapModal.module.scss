@@ -1,6 +1,8 @@
 .placeDiv {
   z-index: 1;
   position: absolute;
+  top: 10px;
+  left: 10px;
 }
 .placecard__container {
   box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
@@ -9,7 +11,6 @@
   background: white none repeat scroll 0% 0%/auto padding-box border-box;
   border-radius: 2px 2px 2px 2px;
   font: normal normal normal normal 11px/normal Roboto, Arial, sans-serif;
-  margin: 10px;
   padding: 15px;
   overflow: hidden;
 }

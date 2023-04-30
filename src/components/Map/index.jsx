@@ -1,22 +1,28 @@
 import React from 'react';
-import { useState, useMemo } from 'react';
-import { GoogleMap, MarkerF, useJsApiLoader } from '@react-google-maps/api';
+import {
+  GoogleMap,
+  MarkerF,
+  useJsApiLoader,
+  InfoWindow,
+} from '@react-google-maps/api';
 import MapI from '../../assets/icons/Map.svg';
 import { MapModal } from '../MapModal';
 
 export const Map = () => {
-  const center = useMemo(
+  const [map, setMap] = React.useState(null);
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    libraries: ['places'],
+  });
+
+  const center = React.useMemo(
     () => ({
       lat: 36.72134814415589,
       lng: -4.4336423038732375,
     }),
     []
   );
-  const [map, setMap] = useState(null);
-  const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY,
-    libraries: ['places'],
-  });
+
   if (!isLoaded) {
     return <div>Loading...</div>;
   }

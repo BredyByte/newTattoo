@@ -10,11 +10,7 @@ export const Fancybox = (props) => {
     const container = containerRef.current;
 
     const delegate = props.delegate || '[data-fancybox]';
-    const options = props.options || {
-      closeButton: true,
-      commonCaption: true,
-      dragToClose: false,
-    };
+    const options = props.options || {};
 
     NativeFancybox.bind(container, delegate, options);
 

@@ -18,7 +18,9 @@ export const BgForLayout = ({ children, isContainer = true }) => {
   }, []);
   return (
     <div
-      className={`${styles.root} ${isContainer ? styles.container : ''}`}
+      className={`${styles.root} ${
+        isContainer ? styles.container : styles.fullContainer
+      }`}
       ref={ref}
     >
       <motion.div

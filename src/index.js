@@ -12,7 +12,6 @@ import {
 } from './routes';
 
 import { withLoading } from './HOC/withLoading';
-
 import './styles/index.scss';
 
 const HomePageWithLoading = withLoading(HomeLayout);

@@ -11,7 +11,7 @@ const iconsContent = [
 
 export const Footer = () => {
   return (
-    <div className={styles.root}>
+    <footer className={styles.root}>
       <p className={styles.rights}>
         All images are Copyright 2022. Black Rituals Tattoo. All rights
         reserved.
@@ -29,6 +29,6 @@ export const Footer = () => {
           </a>
         ))}
       </ul>
-    </div>
+    </footer>
   );
 };
