@@ -30,8 +30,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorLayout />,
         children: [
           {
-            // index: true,
-            path: '/home',
+            index: true,
             element: <HomePageWithLoading />,
           },
           {
@@ -47,8 +46,7 @@ const router = createBrowserRouter([
             element: <WorksPageWithLoading />,
           },
           {
-            // path: '/gallery',
-            index: true,
+            path: '/gallery/:galleryId',
             element: <GalleryPageWithLoading />,
           },
         ],

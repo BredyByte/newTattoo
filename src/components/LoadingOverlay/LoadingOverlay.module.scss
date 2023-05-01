@@ -47,3 +47,14 @@
     }
   }
 }
+@media(min-width: 768px) {
+  .root {
+    font-size: 82px;
+  }
+}
+@media(min-width: 1400px)
+{
+  .root {
+    font-size: 5vw;
+  }
+}

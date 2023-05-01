@@ -1,18 +1,18 @@
 import React from 'react';
 import styles from './WorksPageItem.module.scss';
-import testImg from '../../assets/img/swiperImg4.jpg';
 import PropTypes from 'prop-types';
 import { BsPlusLg } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
-export const WorksPageItem = ({ data }) => {
+export const WorksPageItem = ({ data, index }) => {
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
-        <a href="#" className={styles.imgLink}>
+        <Link to={'/gallery/' + index} className={styles.imgLink}>
           <img src={data.imgData[0]} alt="albumImg" />
           <div className={styles.imgAddText}>Album</div>
           <BsPlusLg className={styles.plusIco} />
-        </a>
+        </Link>
         <div className={styles.descBox}>
           <h3 className={styles.descTitle}>{data.title}</h3>
           <p className={styles.numOfPhot}>{data.imgData.length} photos</p>
@@ -26,5 +26,7 @@ WorksPageItem.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     imgData: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    galleryLink: PropTypes.string.isRequired,
   }).isRequired,
+  index: PropTypes.number.isRequired,
 };

@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  GoogleMap,
-  MarkerF,
-  useJsApiLoader,
-  InfoWindow,
-} from '@react-google-maps/api';
+import { GoogleMap, MarkerF, useJsApiLoader } from '@react-google-maps/api';
 import MapI from '../../assets/icons/Map.svg';
 import { MapModal } from '../MapModal';
 

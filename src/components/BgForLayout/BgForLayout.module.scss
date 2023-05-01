@@ -39,10 +39,17 @@
   }
 }
 
-@media (max-width: 1140px) {
+@media(min-width: 1921px)
+{
+  .root section {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 920px) {
   .root {
     &.container section {
-      padding: 0 40px;
+      padding: 0 20px;
     }
   }
 }

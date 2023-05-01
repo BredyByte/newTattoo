@@ -7,7 +7,7 @@ export const WorksPageList = () => {
   return (
     <section className={styles.root}>
       {worksData.map((i, index) => (
-        <WorksPageItem key={index} data={i} />
+        <WorksPageItem key={index} data={i} index={index} />
       ))}
     </section>
   );
