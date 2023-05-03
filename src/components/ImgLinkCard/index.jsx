@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './WorksPageItem.module.scss';
+import styles from './ImgLinkCard.module.scss';
 import PropTypes from 'prop-types';
 import { BsPlusLg } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
-export const WorksPageItem = ({ data, index }) => {
+export const ImgLinkCard = ({ data, index }) => {
   return (
     <div className={styles.root}>
       <div className={styles.wrapper}>
@@ -22,11 +22,10 @@ export const WorksPageItem = ({ data, index }) => {
   );
 };
 
-WorksPageItem.propTypes = {
+ImgLinkCard.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     imgData: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    galleryLink: PropTypes.string.isRequired,
   }).isRequired,
   index: PropTypes.number.isRequired,
 };

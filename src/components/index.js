@@ -11,6 +11,7 @@ export { CustomCursor } from './CustomCursor';
 export { Footer } from './Footer';
 export { LoadingOverlay } from './LoadingOverlay';
 export { TypingComponent } from './TypingComponent';
-export { WorksPageItem } from './WorksPageItem';
+export { ImgLinkCard } from './ImgLinkCard';
+export { ImgLinkCardList } from './ImgLinkCardList';
 export { BgForLayout } from './BgForLayout';
 export { Fancybox } from './Fancybox';

@@ -3,11 +3,11 @@ import styles from './HomeSections.module.scss';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { Title } from '../../components';
-import { presentationPageData } from '../../assets/data';
+import { homePageData } from '../../assets/data';
 import { SquareBtn } from '../../components';
 import { Link } from 'react-router-dom';
 
-const Section = ({ img, title, index, btnText, isMobile, link }) => {
+const HomeSectionItem = ({ img, title, index, btnText, isMobile, link }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -49,8 +49,8 @@ export const HomeSections = ({ isMobile }) => {
   }, []);
   return (
     <>
-      {presentationPageData.map((obj, index) => (
-        <Section
+      {homePageData.map((obj, index) => (
+        <HomeSectionItem
           key={index}
           img={obj.img}
           title={obj.title}
@@ -64,7 +64,7 @@ export const HomeSections = ({ isMobile }) => {
   );
 };
 
-Section.propTypes = {
+HomeSectionItem.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,

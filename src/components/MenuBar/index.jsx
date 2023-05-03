@@ -3,34 +3,10 @@ import styles from './MenuBar.module.scss';
 import { ReactComponent as LogoText } from '../../assets/icons/LogoText.svg';
 import PropTypes from 'prop-types';
 import { Link, NavLink } from 'react-router-dom';
-
-const arr = [
-  { link: '/', title: 'Home' },
-  { link: '/about', title: 'About' },
-  { link: '/services', title: 'Services' },
-  { link: '/works', title: 'Works' },
-  { link: '/shop', title: 'Shop' },
-  { link: '/contacts', title: 'Contacts' },
-];
+import { menuBarData } from '../../assets/data';
 
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  // const deviceWidth = window.matchMedia('(max-width: 1024px)');
-  // const setHeight = () => {
-  //   document.getElementById(
-  //     'ToggleMenu'
-  //   ).style.minHeight = `${window.screen.height}px`;
-  // };
-  // React.useEffect(() => {
-  //   if (deviceWidth.matches) {
-  //     window.addEventListener('resize', setHeight);
-  //   }
-  //   return () => {
-  //     if (deviceWidth.matches) {
-  //       window.removeEventListener('resize', setHeight);
-  //     }
-  //   };
-  // }, []);
 
   const handleButtonClick = (e) => {
     e.preventDefault();
@@ -45,7 +21,7 @@ export const MenuBar = ({ isScrolled }) => {
         id="ToggleMenu"
         className={`${styles.menu} ${isOpen ? styles.isOpen : ''}`}
       >
-        {arr.map((i, index) => (
+        {menuBarData.map((i, index) => (
           <NavLink
             to={i.link}
             style={({ isActive }) => (isActive ? { color: '#D99938' } : {})}

@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from './Gallery.module.scss';
 import { Fancybox } from '../../components';
-import { worksData } from '../../assets/data';
+import { servicesData } from '../../assets/data';
 import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 export const Gallery = () => {
   const params = useParams();
-  const data = worksData[params.galleryId];
+  const data = servicesData[params.galleryId];
   return (
     <section className={styles.root}>
       <Fancybox

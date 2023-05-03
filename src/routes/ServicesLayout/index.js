@@ -1,7 +1,7 @@
 import { withBgTitleFooterMenu } from '../../HOC/withBgTitleFooterMenu';
-import { ServicesList } from '../../sections';
+import { ImgLinkCardList } from '../../components';
 
 export const ServicesLayout = withBgTitleFooterMenu(
-  ServicesList,
+  ImgLinkCardList,
   'Our Services'
 );

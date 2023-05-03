@@ -1,23 +1,16 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-import { AiOutlineInstagram } from 'react-icons/ai';
-
-const iconsContent = [
-  {
-    link: 'https://www.instagram.com/tattoo_blackrituals/',
-    icon: AiOutlineInstagram,
-  },
-];
+import { footerIconsData } from '../../assets/data';
 
 export const Footer = () => {
   return (
     <footer className={styles.root}>
-      <p className={styles.rights}>
+      <p>
         All images are Copyright 2022. Black Rituals Tattoo. All rights
         reserved.
       </p>
       <ul className={styles.iconsContainer}>
-        {iconsContent.map((i, index) => (
+        {footerIconsData.map((i, index) => (
           <a
             className={styles.iconLink}
             key={index}

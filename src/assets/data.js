@@ -1,53 +1,4 @@
-export const servicesData = [
-  {
-    name: 'BlackWork',
-    desc:
-      ' minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ' +
-      'ex ea commodo consequat.',
-    price: 40,
-    imgData: [
-      require('./img/swiperImg1.jpeg'),
-      require('./img/swiperImg4.jpg'),
-      require('./img/swiperImg1.jpeg'),
-      require('./img/swiperImg3.jpeg'),
-      require('./img/swiperImg4.jpg'),
-      require('./img/swiperImg1.jpeg'),
-    ],
-  },
-  {
-    name: 'Geometry',
-    desc:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ' +
-      'eiusmod temporud exercitation ullamco laboris nisi ut aliquip ' +
-      'ex ea commodo consequat.',
-    price: 900,
-    imgData: [require('./img/swiperImg3.jpeg')],
-  },
-  {
-    name: 'Realism',
-    desc:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ' +
-      'eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad' +
-      ' minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ' +
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ' +
-      'eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad' +
-      ' minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ' +
-      'ex ea commodo consequat. Ex ea commodo consequat.',
-    price: 15,
-    imgData: [
-      require('./img/swiperImg3.jpeg'),
-      require('./img/swiperImg1.jpeg'),
-    ],
-  },
-  {
-    name: 'Piercing',
-    desc: 'Lorem ipsum dolor sit amet',
-    price: 120,
-    imgData: [],
-  },
-];
-
-export const presentationPageData = [
+export const homePageData = [
   {
     title: 'Who We Are',
     img: require('./img/Studio.webp'),
@@ -61,16 +12,10 @@ export const presentationPageData = [
     link: '/services',
   },
   {
-    title: 'The Best Works',
-    img: require('./img/Studio7.webp'),
-    btnText: 'View Works',
-    link: '/works',
-  },
-  {
-    title: 'We Offer',
+    title: 'Our Team',
     img: require('./img/testBgSection.jpeg'),
-    btnText: 'Our Shop',
-    link: '/shop',
+    btnText: 'View Cracks',
+    link: '/team',
   },
   {
     title: 'Locations & Contact',
@@ -80,7 +25,7 @@ export const presentationPageData = [
   },
 ];
 
-export const worksData = [
+export const servicesData = [
   {
     title: 'Tattoo',
     imgData: [
@@ -121,5 +66,37 @@ export const worksData = [
       require('./img/piercing2Test.jpeg'),
       require('./img/piercing1Test.jpeg'),
     ],
+  },
+];
+
+export const ourTeamData = [
+  {
+    title: 'Adri',
+    imgData: [require('./img/swiperImg1.jpeg')],
+  },
+  {
+    title: 'Sofi',
+    imgData: [require('./img/swiperImg2.jpeg')],
+  },
+  {
+    title: 'Marlon',
+    imgData: [require('./img/swiperImg3.jpg')],
+  },
+];
+
+export const menuBarData = [
+  { link: '/', title: 'Home' },
+  { link: '/about', title: 'About' },
+  { link: '/services', title: 'Services' },
+  { link: '/team', title: 'Our Team' },
+  { link: '/contacts', title: 'Contacts' },
+];
+
+import { AiOutlineInstagram } from 'react-icons/ai';
+
+export const footerIconsData = [
+  {
+    link: 'https://www.instagram.com/tattoo_blackrituals/',
+    icon: AiOutlineInstagram,
   },
 ];
