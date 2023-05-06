@@ -28,7 +28,7 @@ export const homePageData = [
 export const servicesData = [
   {
     title: 'Tattoo',
-    link: 'tattoo',
+    route: 'tattoo',
     linkPhoto: require('./img/tattoo2Test.JPG'),
     imgData: [
       require('./img/tattoo2Test.JPG'),
@@ -45,7 +45,7 @@ export const servicesData = [
   },
   {
     title: 'Laser removal',
-    link: 'laser_removal',
+    route: 'laser_removal',
     linkPhoto: require('./img/laser1Test.jpeg'),
     imgData: [
       require('./img/laser1Test.jpeg'),
@@ -60,7 +60,7 @@ export const servicesData = [
   },
   {
     title: 'Piercing',
-    link: 'piercing',
+    route: 'piercing',
     linkPhoto: require('./img/piercing1Test.jpeg'),
     imgData: [
       require('./img/piercing1Test.jpeg'),
@@ -79,7 +79,7 @@ export const ourTeamData = [
   {
     title: 'adriannistal_latinta',
     linkPhoto: require('./img/swiperImg1.jpeg'),
-    link: 'adriannistal_latinta',
+    route: 'adriannistal_latinta',
     imgData: [require('./img/tattoo2Test.JPG')],
     desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
           aliquid, architecto, aspernatur cumque dicta ducimus enim incidunt
@@ -88,11 +88,18 @@ export const ourTeamData = [
           mollitia nam natus necessitatibus nihil nostrum odit pariatur,
           mollitia nam natus necessitatibus nihil nostrum odit pariatur
           provident rem, similique tempora voluptatem.`,
+    social: [
+      {
+        title: 'Intagram',
+        link: 'https://www.instagram.com/adriannistal_latinta/',
+      },
+    ],
+    style: ['COLORWORK', 'JAPANESEWORK', 'HANDWORK'],
   },
   {
     title: 'tattoo.soff',
     linkPhoto: require('./img/swiperImg2.jpeg'),
-    link: 'tattoo_soff',
+    route: 'tattoo_soff',
     imgData: [
       require('./img/tattoo2Test.JPG'),
       require('./img/tattoo1Test.JPG'),
@@ -107,11 +114,18 @@ export const ourTeamData = [
           aliquid, architecto, aspernatur cumque dicta ducimus enim incidunt
           mollitia nam natus necessitatibus nihil nostrum odit pariatur
           provident rem, similique tempora voluptatem.`,
+    social: [
+      {
+        title: 'Intagram',
+        link: 'https://www.instagram.com/tattoo.soff/',
+      },
+    ],
+    style: ['FINE LINE', 'BLACKWORK', 'DOTWORK'],
   },
   {
     title: 'lyon_noirtattoo',
     linkPhoto: require('./img/swiperImg3.jpg'),
-    link: 'lyon_noirtattoo',
+    route: 'lyon_noirtattoo',
     imgData: [
       require('./img/tattoo2Test.JPG'),
       require('./img/tattoo1Test.JPG'),
@@ -120,10 +134,17 @@ export const ourTeamData = [
     ],
     desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
           provident rem, similique tempora voluptatem.`,
+    social: [
+      {
+        title: 'Intagram',
+        link: 'https://www.instagram.com/lyon_noirtattoo/',
+      },
+    ],
+    style: ['DOTWORK', 'BLXCKWORK'],
   },
   {
     title: 'elf.f_tattoo',
-    link: 'elf.f_tattoo',
+    route: 'elf.f_tattoo',
     linkPhoto: require('./img/swiperImg2.jpeg'),
     imgData: [
       require('./img/tattoo2Test.JPG'),
@@ -131,6 +152,13 @@ export const ourTeamData = [
       require('./img/tattoo2Test.JPG'),
     ],
     desc: 'Bio coming soon',
+    social: [
+      {
+        title: 'Intagram',
+        link: 'https://www.instagram.com/elf.f_tattoo/',
+      },
+    ],
+    style: ['PIERCING', 'ANYSINGWORK', 'TATTOOWORK'],
   },
 ];
 

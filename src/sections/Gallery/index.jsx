@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from './Gallery.module.scss';
 import { Fancybox } from '../../components';
-import { servicesData } from '../../assets/data';
 import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export const Gallery = ({ data }) => {
   const galleryId = useParams().galleryId;
-  const newData = data.find((item) => item.link === galleryId);
+  const newData = data.find((item) => item.route === galleryId);
   return (
     <section className={styles.root}>
       <Fancybox
@@ -52,9 +51,10 @@ export const Gallery = ({ data }) => {
 const GalleryDataType = PropTypes.shape({
   title: PropTypes.string.isRequired,
   linkPhoto: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  route: PropTypes.string.isRequired,
   imgData: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   desc: PropTypes.string,
+  style: PropTypes.arrayOf(PropTypes.string),
 });
 
 Gallery.propTypes = {

@@ -16,9 +16,10 @@ export const ImgLinkCardList = ({ data }) => {
 const serviceDataType = PropTypes.shape({
   title: PropTypes.string.isRequired,
   linkPhoto: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  route: PropTypes.string.isRequired,
   imgData: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   desc: PropTypes.string,
+  style: PropTypes.arrayOf(PropTypes.string),
 });
 
 ImgLinkCardList.propTypes = {
