@@ -28,6 +28,7 @@ export const homePageData = [
 export const servicesData = [
   {
     title: 'Tattoo',
+    link: 'tattoo',
     linkPhoto: require('./img/tattoo2Test.JPG'),
     imgData: [
       require('./img/tattoo2Test.JPG'),
@@ -44,6 +45,7 @@ export const servicesData = [
   },
   {
     title: 'Laser removal',
+    link: 'laser_removal',
     linkPhoto: require('./img/laser1Test.jpeg'),
     imgData: [
       require('./img/laser1Test.jpeg'),
@@ -58,50 +60,7 @@ export const servicesData = [
   },
   {
     title: 'Piercing',
-    linkPhoto: require('./img/piercing1Test.jpeg'),
-    imgData: [
-      require('./img/piercing1Test.jpeg'),
-      require('./img/piercing2Test.jpeg'),
-      require('./img/piercing2Test.jpeg'),
-      require('./img/piercing1Test.jpeg'),
-      require('./img/piercing2Test.jpeg'),
-      require('./img/piercing1Test.jpeg'),
-      require('./img/piercing2Test.jpeg'),
-      require('./img/piercing1Test.jpeg'),
-    ],
-  },
-  {
-    title: 'Tattoo',
-    linkPhoto: require('./img/tattoo2Test.JPG'),
-    imgData: [
-      require('./img/tattoo2Test.JPG'),
-      require('./img/tattoo1Test.JPG'),
-      require('./img/tattoo1Test.JPG'),
-      require('./img/tattoo2Test.JPG'),
-      require('./img/tattoo1Test.JPG'),
-      require('./img/tattoo2Test.JPG'),
-      require('./img/tattoo1Test.JPG'),
-      require('./img/tattoo2Test.JPG'),
-      require('./img/tattoo1Test.JPG'),
-      require('./img/tattoo2Test.JPG'),
-    ],
-  },
-  {
-    title: 'Laser removal',
-    linkPhoto: require('./img/laser1Test.jpeg'),
-    imgData: [
-      require('./img/laser1Test.jpeg'),
-      require('./img/laser2Test.jpg'),
-      require('./img/laser2Test.jpg'),
-      require('./img/laser1Test.jpeg'),
-      require('./img/laser2Test.jpg'),
-      require('./img/laser1Test.jpeg'),
-      require('./img/laser2Test.jpg'),
-      require('./img/laser1Test.jpeg'),
-    ],
-  },
-  {
-    title: 'Piercing',
+    link: 'piercing',
     linkPhoto: require('./img/piercing1Test.jpeg'),
     imgData: [
       require('./img/piercing1Test.jpeg'),
@@ -120,6 +79,7 @@ export const ourTeamData = [
   {
     title: 'adriannistal_latinta',
     linkPhoto: require('./img/swiperImg1.jpeg'),
+    link: 'adriannistal_latinta',
     imgData: [require('./img/tattoo2Test.JPG')],
     desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
           aliquid, architecto, aspernatur cumque dicta ducimus enim incidunt
@@ -132,6 +92,7 @@ export const ourTeamData = [
   {
     title: 'tattoo.soff',
     linkPhoto: require('./img/swiperImg2.jpeg'),
+    link: 'tattoo_soff',
     imgData: [
       require('./img/tattoo2Test.JPG'),
       require('./img/tattoo1Test.JPG'),
@@ -150,6 +111,7 @@ export const ourTeamData = [
   {
     title: 'lyon_noirtattoo',
     linkPhoto: require('./img/swiperImg3.jpg'),
+    link: 'lyon_noirtattoo',
     imgData: [
       require('./img/tattoo2Test.JPG'),
       require('./img/tattoo1Test.JPG'),
@@ -161,6 +123,7 @@ export const ourTeamData = [
   },
   {
     title: 'elf.f_tattoo',
+    link: 'elf.f_tattoo',
     linkPhoto: require('./img/swiperImg2.jpeg'),
     imgData: [
       require('./img/tattoo2Test.JPG'),

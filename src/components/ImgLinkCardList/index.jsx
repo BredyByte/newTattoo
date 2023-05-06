@@ -7,7 +7,7 @@ export const ImgLinkCardList = ({ data }) => {
   return (
     <section className={styles.root}>
       {data.map((i, index) => (
-        <ImgLinkCard key={index} data={i} index={index} />
+        <ImgLinkCard key={index} data={i} />
       ))}
     </section>
   );
@@ -15,7 +15,10 @@ export const ImgLinkCardList = ({ data }) => {
 
 const serviceDataType = PropTypes.shape({
   title: PropTypes.string.isRequired,
-  imgData: PropTypes.arrayOf(PropTypes.string).isRequired,
+  linkPhoto: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  imgData: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  desc: PropTypes.string,
 });
 
 ImgLinkCardList.propTypes = {

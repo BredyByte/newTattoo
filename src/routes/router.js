@@ -28,8 +28,7 @@ export const router = createBrowserRouter([
         errorElement: <ErrorLayout />,
         children: [
           {
-            path: '/home',
-            // index: true,
+            index: true,
             element: <HomePageWithLoading />,
           },
           {
@@ -41,13 +40,16 @@ export const router = createBrowserRouter([
             element: <ServicesPageWithLoading data={servicesData} />,
           },
           {
-            // path: '/team',
-            index: true,
+            path: '/services/gallery/:galleryId',
+            element: <GalleryPageWithLoading data={servicesData} />,
+          },
+          {
+            path: '/team',
             element: <OurTeamListPageWithLoading data={ourTeamData} />,
           },
           {
-            path: '/gallery/:galleryId',
-            element: <GalleryPageWithLoading />,
+            path: '/team/gallery/:galleryId',
+            element: <GalleryPageWithLoading data={ourTeamData} />,
           },
         ],
       },

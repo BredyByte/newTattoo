@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './ImgLinkCard.module.scss';
 import PropTypes from 'prop-types';
 import { BsPlusLg } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-export const ImgLinkCard = ({ data, index }) => {
+export const ImgLinkCard = ({ data }) => {
+  const location = useLocation().pathname;
   return (
     <div className={styles.root}>
-      <Link to={'/gallery/' + index} className={styles.imgLink}>
+      <Link to={location + '/gallery/' + data.link} className={styles.imgLink}>
         <img src={data.linkPhoto} alt="albumImg" />
         <div className={styles.imgAddText}>Album</div>
         <BsPlusLg className={styles.plusIco} />
@@ -24,9 +25,9 @@ export const ImgLinkCard = ({ data, index }) => {
 ImgLinkCard.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
     linkPhoto: PropTypes.string.isRequired,
     imgData: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     desc: PropTypes.string,
   }).isRequired,
-  index: PropTypes.number.isRequired,
 };

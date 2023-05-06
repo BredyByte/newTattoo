@@ -3,10 +3,11 @@ import styles from './Gallery.module.scss';
 import { Fancybox } from '../../components';
 import { servicesData } from '../../assets/data';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-export const Gallery = () => {
-  const params = useParams();
-  const data = servicesData[params.galleryId];
+export const Gallery = ({ data }) => {
+  const galleryId = useParams().galleryId;
+  const newData = data.find((item) => item.link === galleryId);
   return (
     <section className={styles.root}>
       <Fancybox
@@ -33,12 +34,12 @@ export const Gallery = () => {
           },
         }}
       >
-        {data.imgData.map((i, index) => (
+        {newData.imgData.map((i, index) => (
           <a
             className={styles.imgLink}
             key={index}
             href={i}
-            data-fancybox={data.title}
+            data-fancybox={newData.title}
           >
             <img className={styles.img} src={i} />
           </a>
@@ -46,4 +47,16 @@ export const Gallery = () => {
       </Fancybox>
     </section>
   );
+};
+
+const GalleryDataType = PropTypes.shape({
+  title: PropTypes.string.isRequired,
+  linkPhoto: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  imgData: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  desc: PropTypes.string,
+});
+
+Gallery.propTypes = {
+  data: PropTypes.arrayOf(GalleryDataType).isRequired,
 };
