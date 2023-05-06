@@ -28,7 +28,8 @@ export const router = createBrowserRouter([
         errorElement: <ErrorLayout />,
         children: [
           {
-            index: true,
+            path: '/home',
+            // index: true,
             element: <HomePageWithLoading />,
           },
           {
@@ -40,7 +41,8 @@ export const router = createBrowserRouter([
             element: <ServicesPageWithLoading data={servicesData} />,
           },
           {
-            path: '/team',
+            // path: '/team',
+            index: true,
             element: <OurTeamListPageWithLoading data={ourTeamData} />,
           },
           {

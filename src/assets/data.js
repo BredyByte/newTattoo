@@ -28,6 +28,7 @@ export const homePageData = [
 export const servicesData = [
   {
     title: 'Tattoo',
+    linkPhoto: require('./img/tattoo2Test.JPG'),
     imgData: [
       require('./img/tattoo2Test.JPG'),
       require('./img/tattoo1Test.JPG'),
@@ -43,6 +44,7 @@ export const servicesData = [
   },
   {
     title: 'Laser removal',
+    linkPhoto: require('./img/laser1Test.jpeg'),
     imgData: [
       require('./img/laser1Test.jpeg'),
       require('./img/laser2Test.jpg'),
@@ -56,6 +58,51 @@ export const servicesData = [
   },
   {
     title: 'Piercing',
+    linkPhoto: require('./img/piercing1Test.jpeg'),
+    imgData: [
+      require('./img/piercing1Test.jpeg'),
+      require('./img/piercing2Test.jpeg'),
+      require('./img/piercing2Test.jpeg'),
+      require('./img/piercing1Test.jpeg'),
+      require('./img/piercing2Test.jpeg'),
+      require('./img/piercing1Test.jpeg'),
+      require('./img/piercing2Test.jpeg'),
+      require('./img/piercing1Test.jpeg'),
+    ],
+  },
+  {
+    title: 'Tattoo',
+    linkPhoto: require('./img/tattoo2Test.JPG'),
+    imgData: [
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+    ],
+  },
+  {
+    title: 'Laser removal',
+    linkPhoto: require('./img/laser1Test.jpeg'),
+    imgData: [
+      require('./img/laser1Test.jpeg'),
+      require('./img/laser2Test.jpg'),
+      require('./img/laser2Test.jpg'),
+      require('./img/laser1Test.jpeg'),
+      require('./img/laser2Test.jpg'),
+      require('./img/laser1Test.jpeg'),
+      require('./img/laser2Test.jpg'),
+      require('./img/laser1Test.jpeg'),
+    ],
+  },
+  {
+    title: 'Piercing',
+    linkPhoto: require('./img/piercing1Test.jpeg'),
     imgData: [
       require('./img/piercing1Test.jpeg'),
       require('./img/piercing2Test.jpeg'),
@@ -71,16 +118,56 @@ export const servicesData = [
 
 export const ourTeamData = [
   {
-    title: 'Adri',
-    imgData: [require('./img/swiperImg1.jpeg')],
+    title: 'adriannistal_latinta',
+    linkPhoto: require('./img/swiperImg1.jpeg'),
+    imgData: [require('./img/tattoo2Test.JPG')],
+    desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+          aliquid, architecto, aspernatur cumque dicta ducimus enim incidunt
+          mollitia nam natus necessitatibus nihil nostrum odit pariatur
+          mollitia nam natus necessitatibus nihil nostrum odit pariatur
+          mollitia nam natus necessitatibus nihil nostrum odit pariatur,
+          mollitia nam natus necessitatibus nihil nostrum odit pariatur
+          provident rem, similique tempora voluptatem.`,
   },
   {
-    title: 'Sofi',
-    imgData: [require('./img/swiperImg2.jpeg')],
+    title: 'tattoo.soff',
+    linkPhoto: require('./img/swiperImg2.jpeg'),
+    imgData: [
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+    ],
+    desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+          aliquid, architecto, aspernatur cumque dicta ducimus enim incidunt
+          mollitia nam natus necessitatibus nihil nostrum odit pariatur
+          provident rem, similique tempora voluptatem.`,
   },
   {
-    title: 'Marlon',
-    imgData: [require('./img/swiperImg3.jpg')],
+    title: 'lyon_noirtattoo',
+    linkPhoto: require('./img/swiperImg3.jpg'),
+    imgData: [
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+    ],
+    desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+          provident rem, similique tempora voluptatem.`,
+  },
+  {
+    title: 'elf.f_tattoo',
+    linkPhoto: require('./img/swiperImg2.jpeg'),
+    imgData: [
+      require('./img/tattoo2Test.JPG'),
+      require('./img/tattoo1Test.JPG'),
+      require('./img/tattoo2Test.JPG'),
+    ],
+    desc: 'Bio coming soon',
   },
 ];
 

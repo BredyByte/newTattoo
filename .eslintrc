@@ -29,5 +29,10 @@
     }],
     "semi": ["warn", "always"],
     "react/display-name": "warn"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
   }
 }
