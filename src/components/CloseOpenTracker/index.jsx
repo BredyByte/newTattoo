@@ -16,7 +16,6 @@ export const CloseOpenTracker = () => {
     endTime.setHours(20, 30, 0, 0);
 
     const dayOfWeek = currentTime.getDay();
-    console.log(dayOfWeek);
 
     const isBetween =
       currentTime.getTime() >= startTime.getTime() &&

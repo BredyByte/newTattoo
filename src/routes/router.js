@@ -8,6 +8,7 @@ import {
   ErrorLayout,
   OurTeamListLayout,
   RootLayout,
+  AboutLayout,
 } from '../routes';
 import { createBrowserRouter } from 'react-router-dom';
 import { servicesData, ourTeamData } from '../assets/data';
@@ -17,6 +18,7 @@ const ContactsPageWithLoading = withLoading(ContactsLayout);
 const ServicesPageWithLoading = withLoading(ServicesLayout);
 const GalleryPageWithLoading = withLoading(GalleryLayout);
 const OurTeamListPageWithLoading = withLoading(OurTeamListLayout);
+const AboutPageWithLoading = withLoading(AboutLayout);
 
 export const router = createBrowserRouter([
   {
@@ -28,7 +30,8 @@ export const router = createBrowserRouter([
         errorElement: <ErrorLayout />,
         children: [
           {
-            index: true,
+            // index: true,
+            path: '/home',
             element: <HomePageWithLoading />,
           },
           {
@@ -50,6 +53,11 @@ export const router = createBrowserRouter([
           {
             path: '/team/gallery/:galleryId',
             element: <GalleryPageWithLoading data={ourTeamData} />,
+          },
+          {
+            // path: '/about',
+            index: true,
+            element: <AboutPageWithLoading />,
           },
         ],
       },

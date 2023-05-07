@@ -5,3 +5,4 @@ export { ErrorLayout } from './ErrorLayout';
 export { ServicesLayout } from './ServicesLayout';
 export { GalleryLayout } from './GalleryLayout';
 export { OurTeamListLayout } from './OurTeamListLayout';
+export { AboutLayout } from './AboutLayout';
