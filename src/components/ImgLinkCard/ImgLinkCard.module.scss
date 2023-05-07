@@ -16,7 +16,7 @@
       height: 100%;
       object-fit: cover;
       position: absolute;
-      transition: all .5s;
+      transition: filter .5s;
     }
     .imgAddText {
       position: absolute;
@@ -34,7 +34,7 @@
       position: absolute;
       top: 45%;
       left: 50%;
-      transition: all .5s;
+      transition: transform 0.5s, opacity 0.5s;
       transform: translate(-50%);
       width: 45px;
       height: 45px;
@@ -42,10 +42,12 @@
     &:hover {
       img {
         filter: grayscale(0);
-        -webkit-filter: grayscale(0);
       }
-      + .infoContainer .descTitle {
+      + .infoContainer .descTitle ,  {
         color: #D99938;
+      }
+      + .infoContainer .desc ,  {
+        border-left: 2px solid #D99938;
       }
       .plusIco {
         opacity: 1;
@@ -60,7 +62,7 @@
       margin-bottom: 20px;
       font-size: 26px;
       font-weight: 300;
-      transition: all .5s;
+      transition: color .5s;
       word-wrap: break-word;
     }
     p {
@@ -69,7 +71,8 @@
     .desc {
       margin-bottom: 85px;
       padding-left: 10px;
-      border-left: 2px solid #D99938;
+      border-left: 2px solid white;
+      transition: border-left .5s;
     }
     .socialBtnContainer {
       position: absolute;
@@ -86,7 +89,7 @@
 
 @media(max-width: 920px) {
   .root {
-    width: 48%;
+    width: 50%;
     .imgLink {
       img {
         filter: grayscale(0);
@@ -103,17 +106,22 @@
         font-size: 36px;
       }
     }
+    &:not(:nth-child(3n+1)) {
+      padding-left: 0;
+    }
+    &:nth-child(2n) {
+      padding-left: 10px;
+    }
   }
 }
+
 @media (max-width: 576px) {
   .root {
     width: 100%;
     margin: 0 auto;
+    padding-left: 0!important;
     .imgLink {
       min-height: 320px;
-    }
-    &:not(:nth-child(3n+1)) {
-      padding-left: 0;
     }
   }
 }

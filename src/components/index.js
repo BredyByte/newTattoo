@@ -15,3 +15,4 @@ export { ImgLinkCard } from './ImgLinkCard';
 export { ImgLinkCardList } from './ImgLinkCardList';
 export { BgForLayout } from './BgForLayout';
 export { Fancybox } from './Fancybox';
+export { CloseOpenTracker } from './CloseOpenTracker';

@@ -17,8 +17,8 @@ export const ImgLinkCard = ({ data }) => {
       <div className={styles.infoContainer}>
         <h3 className={styles.descTitle}>{data.title}</h3>
         <p>{data.imgData.length} photos</p>
-        <div style={{ display: 'flex', gap: '0 10px' }}>
-          {data.style && data.style.map((i, index) => <p key={index}>#{i}</p>)}
+        <div style={{ display: 'flex', gap: '0 10px', marginBottom: '15px' }}>
+          {data.style && data.style.map((i) => <span key={i}>#{i} </span>)}
         </div>
         {data.desc && <p className={styles.desc}>{data.desc}</p>}
         {data.social && (
