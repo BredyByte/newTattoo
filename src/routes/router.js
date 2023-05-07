@@ -30,8 +30,7 @@ export const router = createBrowserRouter([
         errorElement: <ErrorLayout />,
         children: [
           {
-            // index: true,
-            path: '/home',
+            index: true,
             element: <HomePageWithLoading />,
           },
           {
@@ -55,8 +54,7 @@ export const router = createBrowserRouter([
             element: <GalleryPageWithLoading data={ourTeamData} />,
           },
           {
-            // path: '/about',
-            index: true,
+            path: '/about',
             element: <AboutPageWithLoading />,
           },
         ],
