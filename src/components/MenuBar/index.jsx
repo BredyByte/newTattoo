@@ -7,6 +7,17 @@ import { menuBarData } from '../../assets/data';
 
 export const MenuBar = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const deviceWidth = window.matchMedia('(max-width: 920px)');
+  const setHeight = () => {
+    document.getElementById(
+      'ToggleMenu'
+    ).style.minHeight = `${window.screen.height}px`;
+  };
+  React.useEffect(() => {
+    if (deviceWidth.matches) {
+      setHeight();
+    }
+  }, []);
 
   const handleButtonClick = (e) => {
     e.preventDefault();

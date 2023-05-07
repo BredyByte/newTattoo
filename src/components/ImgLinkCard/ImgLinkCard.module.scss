@@ -105,6 +105,9 @@
         color: #D99938;
         font-size: 36px;
       }
+      .desc {
+        border-left: 2px solid #D99938;
+      }
     }
     &:not(:nth-child(3n+1)) {
       padding-left: 0;
